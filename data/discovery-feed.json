@@ -1,0 +1,123 @@
+{
+  "research_date": "2026-09-24",
+  "records": [
+    {
+      "id": "place-kankarbagh-zone",
+      "kind": "locality",
+      "title": "Kankarbagh",
+      "subtitle": "A sprawling neighbourhood food zone, not a single strip",
+      "area": "Kankarbagh",
+      "tags": ["street food", "local lanes", "markets"],
+      "confidence": "medium",
+      "source_ids": ["r-kankarbagh-guide-2026"]
+    },
+    {
+      "id": "corridor-ganga-path",
+      "kind": "corridor",
+      "title": "JP Ganga Path · Digha Roundabout",
+      "subtitle": "A changing riverfront food-vending zone under redevelopment",
+      "area": "Digha",
+      "tags": ["riverfront", "vending", "new food zone"],
+      "confidence": "medium",
+      "source_ids": ["n-ganga-path-food-2026"]
+    },
+    {
+      "id": "corridor-boring-road",
+      "kind": "corridor",
+      "title": "Boring Road",
+      "subtitle": "A dense mixed corridor of street food, cafés and restaurants",
+      "area": "Boring Road",
+      "tags": ["street food", "cafés", "litti"],
+      "confidence": "medium",
+      "source_ids": ["r-patna-boring-2026-06", "a-slurrp-boring-road-2026"]
+    },
+    {
+      "id": "creator-happiness-on-my-plate",
+      "kind": "creator",
+      "title": "@happiness_on_my_plate",
+      "subtitle": "Patna food creator with substantial short-form reach",
+      "area": "Patna",
+      "tags": ["Instagram", "food", "Bihar cuisine"],
+      "confidence": "medium",
+      "source_ids": ["c-happiness-2026"]
+    },
+    {
+      "id": "creator-urgeforfood",
+      "kind": "creator",
+      "title": "@urgeforfood",
+      "subtitle": "Patna food creator covering local and festival food content",
+      "area": "Patna",
+      "tags": ["Instagram", "food", "Bihar food"],
+      "confidence": "medium",
+      "source_ids": ["c-urgeforfood-2026"]
+    },
+    {
+      "id": "event-saras-mela",
+      "kind": "event",
+      "title": "Bihar Saras Mela",
+      "subtitle": "Traditional foods and rural products at Gyan Bhawan · Sep 20–29, 2026",
+      "area": "Gyan Bhawan",
+      "tags": ["event", "traditional food", "rural enterprise"],
+      "confidence": "high",
+      "source_ids": ["n-saras-mela-2026-official-news"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "r-kankarbagh-guide-2026",
+      "type": "editorial",
+      "title": "Kankarbagh Food Guide 2026",
+      "url": "https://travell.cc/bihar/kankarbagh-food-guide/",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "claim_scope": "locality food geography and recurring clusters; not a definitive restaurant ranking"
+    },
+    {
+      "id": "n-ganga-path-food-2026",
+      "type": "news",
+      "title": "Big Change On Patna’s Ganga Driveway: 85 Branded Food Cafes To Open at Digha Roundabout",
+      "url": "https://patnapress.com/patna-ganga-path-food-cafes-vending-zone-revamp/",
+      "published_at": "2026-03-18",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "claim_scope": "reported redevelopment proposal; treat as changing infrastructure, not current completed inventory"
+    },
+    {
+      "id": "a-slurrp-boring-road-2026",
+      "type": "editorial",
+      "title": "Best Street Food Joints Near Boring Road, Patna",
+      "url": "https://www.slurrp.com/food-trails/best-places-for-street-food-near-boring-road-patna-1722950210167",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "claim_scope": "Boring Road as a street-food corridor and individual discovery leads"
+    },
+    {
+      "id": "c-happiness-2026",
+      "type": "creator_index",
+      "title": "Neha / @happiness_on_my_plate",
+      "url": "https://getreelax.com/instagram/happiness_on_my_plate/",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "claim_scope": "creator identity/location and third-party performance metrics; metrics are snapshots, not editorial quality scores"
+    },
+    {
+      "id": "c-urgeforfood-2026",
+      "type": "creator_index",
+      "title": "Shruti / @urgeforfood",
+      "url": "https://getreelax.com/instagram/urgeforfood",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "claim_scope": "creator identity/location and third-party performance metrics"
+    },
+    {
+      "id": "n-saras-mela-2026-official-news",
+      "type": "news",
+      "title": "Saras Mela featuring rural products, traditional food items",
+      "url": "https://timesofindia.indiatimes.com/city/patna/saras-mela-featuring-rural-products-traditional-food-items-to-open-at-gyan-bhawan-today/articleshow/134354530.cms",
+      "published_at": "2026-09-19",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "claim_scope": "event dates, venue, 135 stalls and participating states as reported"
+    }
+  ]
+}
