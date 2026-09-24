@@ -7,7 +7,8 @@
     "entity_status": "unknown or weakly sourced entities stay in research state until independently corroborated",
     "geography": "pincode, locality and food-corridor relationships require explicit evidence; do not infer a corridor from one business",
     "contradictions": "conflicting claims are preserved as unresolved evidence rather than silently collapsed",
-    "pincodes": "a locality may map to multiple pincodes; retain sub-area postal evidence instead of forcing one canonical pincode"
+    "pincodes": "a locality may map to multiple pincodes; retain sub-area postal evidence instead of forcing one canonical pincode",
+    "taxonomy": "canonical dishes and culinary identities are separate from current venue availability"
   },
   "place": {
     "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
@@ -18,10 +19,10 @@
   },
   "dish": {
     "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
-    "heritage_note":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown"
+    "heritage_note":"string","geographic_context":"string","patna_relevance":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown"
   },
   "source": {
-    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal",
+    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal|event_listing",
     "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
     "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown",
     "source_role":"primary|secondary|community_signal|discovery_lead"
