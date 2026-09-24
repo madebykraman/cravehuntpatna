@@ -1,0 +1,30 @@
+{
+  "run":"2026-09-24-06",
+  "strategy":"Freshness-first corridor corroboration + creator-metric contradiction audit + event discovery. Prioritized entities already showing single-source weakness, then searched for independent 2026 evidence instead of maximizing raw result count.",
+  "new_sources":[
+    {"id":"a-exhibition-road-travell-2026","type":"article","title":"Exhibition Road Food Guide 2026","url":"https://travell.cc/bihar/exhibition-road-food-guide/","accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","claims":["Exhibition Road has a dense concentration of street-food stalls, sweets, chaat, samosa, kachori and jalebi"]},
+    {"id":"src-happiness-reelax-2026-09-24","type":"creator_index","title":"Neha From Patna! Food Blogger — @happiness_on_my_plate","url":"https://getreelax.com/instagram/happiness_on_my_plate/","accessed_at":"2026-09-24","source_role":"discovery_lead","confidence":"medium","claims":["Patna-based food blogger profile","third-party indexed follower and engagement estimates"]},
+    {"id":"event-saras-press-2026-09-20","type":"news","title":"Bihar Saras Mela 2026 opens in Patna","url":"https://patnapress.com/bihar-saras-mela-2026-opens-in-patna-women-entrepreneurs-from-15-states-bring-handicrafts-handlooms-and-local-flavours/","accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","claims":["event runs Sept 20-29 at Gyan Bhawan","traditional foods and rural products are part of the event"]},
+    {"id":"event-hind-yugm-2026","type":"event_listing","title":"Hind Yugm Utsav 5.O — Patna","url":"https://happeningnext.com/event/hind-yugm-utsav-5o-%E0%A5%A4-%E0%A4%B9%E0%A4%BF%E0%A4%82%E0%A4%A6-%E0%A4%AF%E0%A5%81%E0%A4%97%E0%A5%8D%E0%A4%AE-%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%B8%E0%A4%B5-2026-eid1ar6emblsc","accessed_at":"2026-09-24","source_role":"discovery_lead","confidence":"low","claims":["literary and cultural festival scheduled Sept 25-27 at Bapu Tower"]}
+  ],
+  "contradictions":[
+    {"id":"claim-creator-happiness-followers-2026-09-24","entity_id":"creator-happiness-on-my-plate","field":"followers","statement":"Third-party creator indexes disagree on follower count on the same capture date","status":"contradicted","confidence":"medium","resolution":"Preserve both observations with source and timestamp; do not use follower count as an editorial quality score."}
+  ],
+  "dedupe_actions":[
+    "Kept Exhibition Road as one locality entity and added a second source instead of creating a duplicate corridor record.",
+    "Kept @happiness_on_my_plate as one creator and preserved conflicting third-party metrics as metric history.",
+    "Kept Saras Mela as the existing event entity; the new Patna Press article is corroborating evidence, not a duplicate event."
+  ],
+  "product_learnings":[
+    "Source disagreement should be a first-class data state, especially for creator metrics and dynamic fields.",
+    "Corridor confidence should rise through independent source corroboration, not through repeated citations of the same article family.",
+    "Event ingestion should distinguish food-centric events from cultural events that may produce food discovery opportunities; the latter belong in a lower-confidence discovery layer until food relevance is established."
+  ],
+  "next_metrics":[
+    "independent_source_count_per_corridor",
+    "same-day_metric_disagreement_rate",
+    "canonical_creator_to_place_links",
+    "event_food_relevance_confidence",
+    "unresolved_place_alias_count"
+  ]
+}
