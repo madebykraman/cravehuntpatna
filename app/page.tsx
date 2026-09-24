@@ -3,13 +3,13 @@
 import { useMemo, useState } from "react";
 import { ArrowRight, Bookmark, ExternalLink, Flame, Heart, MapPin, Play, Search, Send, Sparkles, X } from "lucide-react";
 import feed from "../data/discovery-feed.json";
+import atlas from "../data/atlas-surface.json";
 
 type RecordItem = (typeof feed.records)[number];
 
 const chips = ["Litti Chokha", "Street Food", "Chaat", "Biryani", "Sweets", "Coffee", "Kankarbagh", "Boring Road"];
 
 const sourceById = Object.fromEntries(feed.sources.map((source) => [source.id, source]));
-
 const sourceLink = (record: RecordItem) => sourceById[record.source_ids[0]]?.url ?? "#";
 
 export default function Home() {
@@ -58,6 +58,12 @@ export default function Home() {
         </article>)}
       </div>
       {filtered.length === 0 && <div className="empty">No verified research record matches that hunt yet. Submit it and make the gap visible.</div>}
+    </section>
+
+    <section className="atlasExplorer" id="locality-atlas">
+      <div className="sectionHead"><div><p className="eyebrow">LOCALITY ATLAS · LIVE RESEARCH</p><h2>Where Patna<br/><i>eats.</i></h2></div><p className="muted">Geography is treated as evidence. Pincodes can overlap, corridors can change, and proposed food zones are never shown as permanent facts.</p></div>
+      <div className="atlasGrid">{atlas.records.map((place) => <article className="atlasCard" key={place.id}><div className="atlasTop"><span>{place.type}</span><b>{place.status}</b></div><h3>{place.name}</h3><p>{place.signals.join(" · ")}</p><div className="atlasMeta"><span><MapPin size={13}/>{place.pincode}</span><span>{place.pincode_confidence} pin</span><span>{place.evidence} evidence</span></div><div className="atlasOpen"><span>Open question</span><b>{place.open}</b></div></article>)}</div>
+      <div className="atlasCreator"><div><p className="eyebrow">CREATOR COVERAGE</p><h3>Reach is a signal.<br/>Not a verdict.</h3></div>{atlas.creator_leads.map((creator) => <a href={creator.source} target="_blank" rel="noreferrer" key={creator.handle}><span>{creator.handle}</span><b>{creator.label}</b><small>{creator.note}</small><ExternalLink size={15}/></a>)}</div>
     </section>
 
     <section className="dark" id="hunts"><div className="huntVisual"><div className="circle">CRAVE<br/>HUNT<br/><span>∞</span></div><div className="orbit o1">LITTI</div><div className="orbit o2">MOMO</div><div className="orbit o3">CHAAT</div></div><div className="huntCopy"><p className="eyebrow">THE FEATURE THAT BUILDS THE DATABASE</p><h2>Can't find<br/><i>your craving?</i></h2><p>Tell us exactly what you're hunting. Dish. Area. A reel you saw. A stall your friend swears by. We'll investigate it, preserve the evidence and decide what belongs in the archive.</p><button className="creamBtn" onClick={() => setHunt(true)}>Start a Crave Hunt <Send size={16}/></button><small>No anonymous star spam. No pay-to-win rankings. Better local intelligence.</small></div></section>
