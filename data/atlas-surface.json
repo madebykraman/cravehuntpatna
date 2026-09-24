@@ -1,0 +1,16 @@
+{
+  "research_date": "2026-09-24",
+  "purpose": "Presentation layer for the Locality Atlas. This intentionally exposes research status and uncertainty instead of pretending the atlas is a complete directory.",
+  "records": [
+    {"id":"atlas-exhibition-road","name":"Exhibition Road","type":"corridor","status":"active","signal":"high","pincode":"800001","pincode_confidence":"medium","signals":["samosa","kachori","chaat","jalebi","sweets"],"evidence":2,"source_role":"secondary","freshness":"recent","open":"Vendor level verification"},
+    {"id":"atlas-kankarbagh","name":"Kankarbagh","type":"locality","status":"active","signal":"high","pincode":"800020 / 800016 / 800026","pincode_confidence":"medium","signals":["markets","street food","neighbourhood dining"],"evidence":3,"source_role":"secondary + community","freshness":"recent","open":"Map exact food clusters"},
+    {"id":"atlas-boring-road","name":"Boring Road","type":"corridor","status":"active","signal":"high","pincode":"800010 / 800013","pincode_confidence":"low","signals":["street food","cafes","litti"],"evidence":3,"source_role":"secondary + community","freshness":"recent","open":"Resolve postal segment per place"},
+    {"id":"atlas-digha","name":"Digha Golambar · JP Ganga Path","type":"changing zone","status":"redevelopment","signal":"emerging","pincode":"unresolved","pincode_confidence":"unverified","signals":["riverfront vending","food hubs","cafes"],"evidence":2,"source_role":"news","freshness":"recent","open":"Operational vs proposed footprint"},
+    {"id":"atlas-patna-junction","name":"Patna Junction · Buddha Smriti Park","type":"vending zone","status":"reported operational","signal":"emerging","pincode":"800001","pincode_confidence":"medium","signals":["commuter food","vending"],"evidence":1,"source_role":"news","freshness":"recent","open":"Current footprint verification"},
+    {"id":"atlas-fraser-road","name":"Fraser Road","type":"corridor","status":"active","signal":"medium","pincode":"800001","pincode_confidence":"medium","signals":["restaurants","heritage context","street food"],"evidence":1,"source_role":"secondary","freshness":"recent","open":"Independent corroboration"}
+  ],
+  "creator_leads": [
+    {"handle":"@foodiesfood_court","label":"Patna creator lead","confidence":"medium","source":"https://qoruz.com/foodiesfood_court","note":"Third party index reports Patna location and large food audience. Reach is a distribution signal, not a quality score."}
+  ],
+  "atlas_metrics": ["food signal density","independent evidence count","source freshness","pincode confidence","creator coverage","corridor lifecycle","unresolved claims"]
+}
