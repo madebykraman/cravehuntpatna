@@ -6,7 +6,7 @@
     {"id":"loc-old-museum-road","name":"Old Museum Road / Khao Gali","pincodes":["800001"],"food_role":"street_food_corridor","food_signals":["street snacks","chaat","litti"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"],"confidence":"medium","last_verified":"2026-09-24"},
     {"id":"loc-boring-road","name":"Boring Road","pincodes":["800010","800013"],"food_role":"mixed_food_corridor","food_signals":["street food","litti","contemporary dining"],"evidence":["r-patna-food-2026-09","r-patna-boring-2026-06","a-slurrp-boring-road-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Boring Road postal boundaries vary by segment; do not expose one pincode as universal"]},
     {"id":"loc-maurya-lok","name":"Maurya Lok","pincodes":["800001"],"food_role":"legacy_food_corridor","food_signals":["street food"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"],"confidence":"medium","last_verified":"2026-09-24"},
-    {"id":"loc-exhibition-road","name":"Exhibition Road","pincodes":["800001"],"food_role":"high_density_street_food_corridor","food_signals":["samosa","kachori","chaat","jalebi","sweets"],"evidence":["a-exhibition-road-guide-2026"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-exhibition-road","name":"Exhibition Road","pincodes":["800001"],"food_role":"high_density_street_food_corridor","food_signals":["samosa","kachori","chaat","jalebi","sweets"],"evidence":["a-exhibition-road-guide-2026","a-exhibition-road-travell-2026"],"confidence":"medium","last_verified":"2026-09-24"},
     {"id":"loc-fraser-road","name":"Fraser Road","pincodes":["800001"],"food_role":"central_mixed_food_corridor","food_signals":["restaurants","heritage_context","street food"],"evidence":["a-fraser-road-guide-2026"],"confidence":"low","last_verified":"2026-09-24"},
     {"id":"loc-mandiri-chhajjubag","name":"Mandiri–Chhajjubag","pincodes":["800004"],"food_role":"emerging_vending_zone","food_signals":["organised street food"],"evidence":["n-square-street-2026-02"],"confidence":"medium","last_verified":"2026-09-24"},
     {"id":"loc-digha","name":"Digha Golambar / JP Ganga Path","pincodes":[],"food_role":"emerging_riverfront_food_zone","food_signals":["riverfront vending","proposed food hub","cafes"],"evidence":["n-ganga-path-food-2026","n-pmc-food-hubs-2026"],"confidence":"medium","last_verified":"2026-09-24"},
@@ -28,7 +28,9 @@
     "creator_media_coverage_by_locality",
     "unresolved_entity_aliases",
     "pincode_conflict_rate",
-    "corridor_claims_with_two_or_more_independent_sources"
+    "corridor_claims_with_two_or_more_independent_sources",
+    "food_signal_specificity_by_corridor",
+    "creator_to_corridor_link_count"
   ],
-  "new_research_observation": "Postal geography is itself an evidence problem. Large Patna neighbourhood labels such as Kankarbagh, Boring Road and Sri Krishna Puri span multiple postal areas. The product should therefore search and display exact place-address pincode relationships rather than use locality-level pincode shortcuts."
+  "new_research_observation": "Postal geography is itself an evidence problem. Large Patna neighbourhood labels such as Kankarbagh, Boring Road and Sri Krishna Puri span multiple postal areas. The product should therefore search and display exact place-address pincode relationships rather than use locality-level pincode shortcuts. A second independent 2026 editorial source now supports Exhibition Road as a dense street-food corridor, strengthening but not fully verifying that corridor claim."
 }
