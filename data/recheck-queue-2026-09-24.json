@@ -6,13 +6,15 @@
     "Aging current claims older than 30 days receive a recheck flag when no newer source exists.",
     "Planned infrastructure requires fresh operational confirmation before publication as active.",
     "Community signals are rechecked for corroboration before promotion to fact.",
-    "Creator reach metrics are discovery metadata, never editorial quality scores."
+    "Creator reach metrics are discovery metadata, never editorial quality scores.",
+    "Viral food media with unresolved authenticity or context stays out of factual entity evidence."
   ],
   "items": [
     {"id":"rq12-01","entity":"Chaat Guru, Exhibition Road","type":"contradiction","priority":"high","reason":"source simultaneously contains shutdown wording and an open-now label","next_action":"find an independent current source or direct venue confirmation"},
     {"id":"rq12-02","entity":"Square Street","type":"operating_state","priority":"high","reason":"historical planned opening claim needs current operational evidence","next_action":"search current official/local reporting and current venue listings"},
     {"id":"rq12-03","entity":"Freshbox","type":"community_signal","priority":"medium","reason":"Reddit reports closure and strong local nostalgia","next_action":"find independent historical/current business evidence; retain as closed only when corroborated"},
     {"id":"rq12-04","entity":"A 1 Chandrakala Shop","type":"discovery_lead","priority":"medium","reason":"third-party listing is not yet independently corroborated","next_action":"find a second independent source and exact locality/pincode evidence"},
-    {"id":"rq12-05","entity":"Bihar Saras Mela 2026","type":"event_observation","priority":"medium","reason":"attendance/sales figures vary by reporting window","next_action":"continue dated observation collection until event closes; do not overwrite earlier figures"}
+    {"id":"rq12-05","entity":"Bihar Saras Mela 2026","type":"event_observation","priority":"medium","reason":"attendance/sales figures vary by reporting window","next_action":"continue dated observation collection until event closes; do not overwrite earlier figures"},
+    {"id":"rq15-01","entity":"Patna Junction viral food-vendor video","type":"media_integrity","priority":"high","reason":"reported viral footage was fact-checked as scripted; similar food videos can contaminate place/vendor evidence","next_action":"classify media authenticity/context before linking viral food footage to factual entities"}
   ]
 }
