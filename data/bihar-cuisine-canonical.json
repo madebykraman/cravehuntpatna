@@ -1,0 +1,27 @@
+{
+  "research_date": "2026-09-24",
+  "title": "Bihar canonical cuisine index",
+  "method": "A canonical heritage index seeded from a 2026 Indian Express report describing the Bihar government's official showcase list of 18 delicacies, cross-read against the 2026 NITI Aayog tourism anthology. This is a Bihar-wide culinary taxonomy, not a claim that every item is uniquely from Patna or currently available in Patna.",
+  "source_ids": ["src-bihar-18-delicacies-ie-2026", "src-bihar-cuisine-niti-2026"],
+  "items": [
+    {"id":"dish-litti-chokha","name":"Litti Chokha","category":"savory_main","geographic_context":"Bihar","patna_relevance":"core_bihar_identity","confidence":"high"},
+    {"id":"dish-kadhi-bari","name":"Kadhi Bari","category":"savory_main","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-chana-ghughni","name":"Chana Ghughni","category":"snack","geographic_context":"Bihar","patna_relevance":"street_food_candidate","confidence":"high"},
+    {"id":"dish-pittha","name":"Pittha","category":"savory_or_sweet","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-maner-laddoo","name":"Maner Laddoo","category":"sweet","geographic_context":"Maner near Patna","patna_relevance":"patna_region_signature","confidence":"high"},
+    {"id":"dish-tilkut","name":"Tilkut / Tilkatri","category":"sweet","geographic_context":"Gaya","patna_relevance":"bihar_food_identity","confidence":"high"},
+    {"id":"dish-belgrami","name":"Belgrami","category":"sweet","geographic_context":"Udwant Nagar near Arrah","patna_relevance":"bihar_food_identity","confidence":"high"},
+    {"id":"dish-kheer-makhana","name":"Kheer Makhana","category":"sweet","geographic_context":"Darbhanga","patna_relevance":"bihar_food_identity","confidence":"high"},
+    {"id":"dish-khaja","name":"Khaja","category":"sweet","geographic_context":"Silao / Rajgir","patna_relevance":"bihar_food_identity","confidence":"high"},
+    {"id":"dish-khoye-ki-lai","name":"Khoye-ki-Lai","category":"sweet","geographic_context":"Barh near Patna","patna_relevance":"patna_region_signature","confidence":"high"},
+    {"id":"dish-chandrakala","name":"Chandrakala","category":"sweet","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-balushahi","name":"Balushahi","category":"sweet","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-parwal-ki-mithai","name":"Parwal-ki-Mithai","category":"sweet","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-malpua","name":"Malpua","category":"sweet","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-bhuja","name":"Bhuja","category":"snack","geographic_context":"Bihar","patna_relevance":"street_food_candidate","confidence":"high"},
+    {"id":"dish-dahi-chooda","name":"Dahi-Chooda","category":"breakfast_or_festival","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-khichdi","name":"Khichdi","category":"savory_main","geographic_context":"Bihar","patna_relevance":"regional_cuisine","confidence":"high"},
+    {"id":"dish-bihari-thali","name":"Bihari Thali","category":"meal","geographic_context":"Bihar","patna_relevance":"high_value_discovery_taxonomy","confidence":"high"}
+  ],
+  "product_note": "This index should power cuisine discovery and provenance-aware dish pages. It should not be used as a restaurant ranking, and availability in Patna must be separately evidenced at place level."
+}
