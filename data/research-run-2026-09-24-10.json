@@ -1,0 +1,92 @@
+{
+  "run_id": "2026-09-24-10",
+  "research_date": "2026-09-24",
+  "strategy": {
+    "shift": "entity-lifecycle and source-diversity pass",
+    "query_mix": [
+      "current venue status and shutdown signals on Patna food corridors",
+      "Patna food creators with location and category evidence",
+      "current Patna food events with cultural/food relevance",
+      "Bihar culinary heritage sources with explicit geographic context",
+      "food discovery products emphasizing dish-level trust and temporal state"
+    ],
+    "new_metrics": [
+      "venue_status_conflict_rate",
+      "source_role_diversity",
+      "creator_geographic_specificity",
+      "event_food_relevance",
+      "entity_state_transition_evidence",
+      "claim_to_source_role_ratio"
+    ]
+  },
+  "findings": [
+    {
+      "id": "finding-chaat-guru-shutdown-signal-2026-09",
+      "type": "entity_lifecycle",
+      "entity": "place-chaat-guru-exhibition-road",
+      "statement": "A current September 2026 Magicpin listing marks Chaat Guru, Exhibition Road, as shut down while still exposing older menu/review metadata.",
+      "status": "observed",
+      "confidence": "medium",
+      "source_ids": ["m-chaat-guru-exhibition-road-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24",
+      "note": "Single-platform status signal; do not treat as independently confirmed closure without a second source. Useful as a re-verification trigger."
+    },
+    {
+      "id": "finding-rajesh-rawani-creator-lead-2026",
+      "type": "creator_signal",
+      "entity": "creator-rajesh-rawani",
+      "statement": "Socialveins currently indexes Rajesh Rawani (@r_rajesh_07) in Patna under food/entertainment/home-chef categories and reports more than 2M Instagram followers.",
+      "status": "discovery_lead",
+      "confidence": "medium",
+      "source_ids": ["c-rajesh-rawani-socialveins-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24",
+      "note": "Third-party creator index. Follower count is an observed metric, not an editorial quality score or proof of Patna food coverage depth."
+    },
+    {
+      "id": "finding-saras-mela-current-food-event-2026-09-24",
+      "type": "event_signal",
+      "entity": "event-saras-mela-2026",
+      "statement": "Bihar Saras Mela remains an active Patna food/cultural discovery signal through September 29, 2026, with traditional food among its stated offerings and approximately 135 stalls reported at Gyan Bhawan.",
+      "status": "corroborated",
+      "confidence": "high",
+      "source_ids": ["n-saras-mela-2026-09-19", "n-saras-mela-2026-09-20"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    },
+    {
+      "id": "finding-eatables-trust-pattern-2026-09-24",
+      "type": "product_pattern",
+      "entity": "product-eatables",
+      "statement": "Eatables explicitly makes dish-level reviews, neighbourhood activity and saved must-try lists core discovery primitives, while excluding paid placements from ranking.",
+      "status": "observed",
+      "confidence": "high",
+      "source_ids": ["p-eatables-2026-09-24"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "contradiction-chaat-guru-current-status",
+      "entity": "place-chaat-guru-exhibition-road",
+      "statement": "A venue platform can retain historical menu/review content after a place has shut down; Crave Hunt must separate historical evidence from current operational status."
+    },
+    {
+      "id": "contradiction-creator-index-metrics",
+      "entity": "creator-rajesh-rawani",
+      "statement": "Third-party creator indexes provide useful scale/location leads but cannot establish content quality, current activity, or Patna-specific food relevance by themselves."
+    }
+  ],
+  "dedupe_actions": [
+    "Do not create a generic Exhibition Road place record from the Chaat Guru status page unless the venue is independently corroborated.",
+    "Keep Rajesh Rawani as a creator research lead rather than a verified Patna food authority.",
+    "Append Saras Mela as a current observation to the existing event entity rather than creating another event record."
+  ],
+  "implementation": {
+    "data_change": "Introduce a current-status recheck queue concept for venue records whose platform status conflicts with historical content.",
+    "product_change": "Separate historical evidence from current operational state in place pages and search results.",
+    "next_ui": "Evidence timeline and state badge should show when a place is active, uncertain or potentially closed, with source role visible."
+  }
+}
