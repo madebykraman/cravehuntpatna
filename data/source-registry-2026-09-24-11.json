@@ -1,0 +1,96 @@
+{
+  "run_id": "2026-09-24-11",
+  "sources": [
+    {
+      "id": "m-a1-chandrakala-2026",
+      "type": "map",
+      "title": "A 1 Chandrakala Shop · Fraser Road Area",
+      "url": "https://magicpin.in/Patna/Fraser-Road-Area/Restaurant/A-1-Chandrakala-Shop/store/1595181",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "current third-party listing, street-food category, New Market/Chandrakala Gali location and listed hours"
+    },
+    {
+      "id": "n-saras-mela-2026-current",
+      "type": "news",
+      "title": "Bihar Saras Mela In Patna: Rs 68.56 Lakh Business In Three Days",
+      "url": "https://patnapress.com/bihar-saras-mela-patna-rs-68-56-lakh-business-rural-women/",
+      "published_at": "2026-09-23",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary",
+      "claim_scope": "reported three-day sales, 135+ stalls, 15-state participation and event end date"
+    },
+    {
+      "id": "n-saras-mela-2026-24k",
+      "type": "news",
+      "title": "Bihar Saras Mela Draws 24,000 Visitors in a Day, Sales Cross Rs 51 Lakh in Just Two Days",
+      "url": "https://patnapress.com/bihar-saras-mela-patna-sales-51-lakh-24000-visitors-buyer-seller-meet/",
+      "published_at": "2026-09-22",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary",
+      "claim_scope": "reported second-day visitor count and two-day sales"
+    },
+    {
+      "id": "c-urgeforfood-2026-current",
+      "type": "creator_index",
+      "title": "Patna food blogger · Shruti / @urgeforfood",
+      "url": "https://getreelax.com/instagram/urgeforfood",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "creator identity/location and third-party performance snapshot; hashtags used as topical discovery signals only"
+    },
+    {
+      "id": "n-square-street-2026",
+      "type": "news",
+      "title": "New Insta-Worthy Food Spot Alert: Square Street Is Coming To Patna’s Mandiri By Month-End",
+      "url": "https://patnapress.com/patna-square-street-vending-zone-mandiri-road-2026/",
+      "published_at": "2026-02-14",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "aging",
+      "source_role": "secondary",
+      "claim_scope": "reported PMC vending-zone plan; does not independently establish current operation"
+    },
+    {
+      "id": "p-hogr-2026-current",
+      "type": "article",
+      "title": "HOGR · social food discovery",
+      "url": "https://www.hogr.app/",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "friends/influencer recommendations, social feed, food video and reward mechanics as comparable product patterns"
+    },
+    {
+      "id": "p-foodee-2026-current",
+      "type": "article",
+      "title": "Foodee · dish-level discovery",
+      "url": "https://foodee.io/",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "dish-level rating, personalized recommendation and food-profile mechanics"
+    },
+    {
+      "id": "p-dishcovr-2026-current",
+      "type": "article",
+      "title": "Dishcovr · visual dish discovery",
+      "url": "https://www.dishcovr.com/",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "visual dish feeds, saves, social profiles, group planning and booking mechanics"
+    }
+  ]
+}
