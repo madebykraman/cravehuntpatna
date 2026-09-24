@@ -13,7 +13,8 @@
     {"id":"loc-kankarbagh","name":"Kankarbagh","pincodes":["800020","800016","800026"],"food_role":"neighbourhood_food_zone","food_signals":["local street food","cafes","neighbourhood dining"],"evidence":["r-patna-food-2026-09","r-kankarbagh-guide-2026","postal-kankarbagh-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Kankarbagh is not safely represented by one pincode; postal sources show multiple sub-area codes"]},
     {"id":"loc-s-k-puri","name":"S.K. Puri / Sri Krishna Puri","pincodes":["800010","800013","800028"],"food_role":"established_restaurant_and_cafe_zone","food_signals":["cafes","sweets","restaurant dining","chaat"],"evidence":["map-harilals-2026-09","r-patna-aesthetics-2026-02","r-patna-street-2026-06","postal-sk-puri-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Sri Krishna Puri postal codes vary by sub-area; use exact address before attaching a place to a pincode"]},
     {"id":"loc-patna-city","name":"Patna City / old Patna","pincodes":["800008"],"food_role":"heritage_food_context","food_signals":["heritage food research"],"evidence":["bihar-tourism-dutch-building","bihar-tourism-khuda-baksh"],"confidence":"low","last_verified":"2026-09-24"},
-    {"id":"loc-danapur","name":"Danapur","pincodes":["801503"],"food_role":"outer_patna_food_context","food_signals":["food-and-heritage context"],"evidence":["bihar-tourism-handi-sahib"],"confidence":"low","last_verified":"2026-09-24"}
+    {"id":"loc-danapur","name":"Danapur","pincodes":["801503"],"food_role":"outer_patna_food_context","food_signals":["food-and-heritage context"],"evidence":["bihar-tourism-handi-sahib"],"confidence":"low","last_verified":"2026-09-24"},
+    {"id":"loc-patna-junction","name":"Patna Junction / Buddha Smriti Park vending zone","pincodes":["800001"],"food_role":"organised_vending_zone","food_signals":["food carts","organised street vending"],"evidence":["n-patna-junction-vending-2026-02"],"confidence":"medium","last_verified":"2026-09-24","status":"reported_operational"}
   ],
   "unverified_geographies": [
     {"name":"Khajpura","pincodes":["800014"],"reason":"appears in earlier UI seed data, but current research pass did not establish a strong corridor-level food claim"},
@@ -30,7 +31,9 @@
     "pincode_conflict_rate",
     "corridor_claims_with_two_or_more_independent_sources",
     "food_signal_specificity_by_corridor",
-    "creator_to_corridor_link_count"
+    "creator_to_corridor_link_count",
+    "organised_vending_zone_status",
+    "corridor_transition_rate"
   ],
-  "new_research_observation": "Postal geography is itself an evidence problem. Large Patna neighbourhood labels such as Kankarbagh, Boring Road and Sri Krishna Puri span multiple postal areas. The product should therefore search and display exact place-address pincode relationships rather than use locality-level pincode shortcuts. A second independent 2026 editorial source now supports Exhibition Road as a dense street-food corridor, strengthening but not fully verifying that corridor claim."
+  "new_research_observation": "Patna's food geography is increasingly shaped by municipal vending infrastructure, not only organically formed restaurant streets. Square Street in Mandiri–Chhajjubag, the Digha Golambar/JP Ganga Path proposal, and the Patna Junction/Buddha Smriti Park vending zone should therefore be modelled as infrastructure-backed food zones with lifecycle status. Current evidence does not justify treating every proposed zone as operational. Exhibition Road also has a second independent 2026 guide supporting a dense street-food identity, but the source is editorial and should remain medium confidence until stronger independent corroboration exists."
 }
