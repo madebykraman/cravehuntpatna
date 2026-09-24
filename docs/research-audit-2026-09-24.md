@@ -4,29 +4,40 @@ Date: 2026-09-24
 
 ## This pass
 
-The research strategy shifted from broad restaurant discovery toward three higher-signal layers: (1) primary/official culinary heritage, (2) creator-to-food intelligence, and (3) event/community freshness.
+The research strategy shifted from broad restaurant discovery toward evidence density, geographic specificity, primary culinary heritage, event freshness and entity quality.
 
 ## Material findings
 
-- Bihar Tourism currently provides a substantially richer primary culinary corpus than the seed dataset had captured. New source-backed heritage records cover Thekua, Khichdi, Champaran Meat/Ahuna, Dal Pittha, Dahi Chuda, Tilkut, Maner Laddoo and Laung Lata, in addition to Litti Chokha and Sattu Sharbat.
-- This changes the product's heritage model: Patna should not be represented only through Litti Chokha. The archive should connect city discovery to the wider Bihar culinary geography and seasonal/festival calendar.
-- The creator layer now has five Patna/Bihar discovery leads with provenance and capture dates. Third-party metrics are explicitly treated as volatile ranking inputs, not editorial evidence.
-- Saras Mela at Gyan Bhawan is a useful event signal because it combines traditional food, rural producers and public demand. Current reporting places the 2026 fair at Sept 20–29 with 135+ stalls; later reporting gives day-by-day visitor/sales figures. Those figures remain reported claims and are not treated as audited metrics.
-- Product research continues to support a differentiated model: video/context + personal map + saved discoveries are useful patterns, but Crave Hunt's defensible layer should be source-backed local knowledge, dish/place relationships, provenance, freshness and field notes rather than another rating directory.
+- Bihar Tourism currently provides a substantially richer primary culinary corpus than the seed dataset had captured. New source-backed heritage records include Thekua, Khichdi, Sattu Sharbat, Dal Pittha, Dahi Chuda, Laung Lata and Maner Laddoo, plus the previously captured Litti Chokha and Champaran Meat/Ahuna.
+- The heritage model should therefore represent Patna as an access point into wider Bihar foodways, not reduce the city to Litti Chokha.
+- BRLPS's official archive independently confirms the 2026 Saras Mela at Gyan Bhawan for 20–29 September. News reports add visitor and sales figures, but those remain reported claims rather than audited Crave Hunt metrics.
+- Mandiri–Chhajjubag has an emerging organised street-food infrastructure signal through the reported Square Street municipal vending-zone project. Current operating status still requires field/map verification.
+- Current map discovery surfaced Harilal's Sweets Bakery & Restaurant in S.K. Puri with a concrete address. It remains a discovery lead, not an editorial endorsement.
 
 ## Contradictions / data hygiene
 
-- Existing seed data used `drink|ingredient` as a dish type for Sattu. The schema now separates `drink` and `ingredient`; legacy records should be normalized in the next seed-data migration.
-- Community recommendations frequently disagree on restaurant quality. These remain sentiment signals and are not converted into objective ratings.
-- Third-party creator directories expose inconsistent metrics. Metrics are stored with capture dates and confidence and should never be used as permanent facts.
-- Event dates and reported attendance/sales require source-level timestamping because event reporting changes during the event lifecycle.
+- Earlier seed geography included broad or weak pincode assignments. Weak locality claims are now quarantined rather than silently published.
+- Food corridors, restaurants and dishes must remain separate canonical entity types.
+- Community recommendations frequently disagree on restaurant quality. They remain sentiment signals and are not converted into objective ratings.
+- Existing UI still contains placeholder restaurant cards and placeholder reel URLs. These should not be treated as research records.
+- The old Sattu type value `drink|ingredient` remains a migration item; the schema now expects one controlled type per dish record.
 
-## New search metric for subsequent passes
+## New search metric
 
-Prioritize records by **evidence density × locality specificity × novelty × freshness × archival value**, not by search-result popularity alone.
+Prioritize research by:
 
-For places, seek at least one location source plus one independent food/context source before high-confidence publication. For dishes, prefer primary heritage sources and then map modern Patna availability. For creators, require a canonical profile plus individual content links before linking a reel to a place. For events, store start/end dates and refresh status from current reporting.
+`evidence density × locality specificity × novelty × freshness × archival value`
 
-## Next highest-value build target
+For places, seek a location source plus an independent food/context source before high-confidence publication. For dishes, prefer primary heritage sources and then map modern Patna availability. For creators, require canonical profiles and individual content before attaching media to entities. For events, maintain explicit lifecycle dates and refresh status.
 
-Build the **Patna Locality Atlas**: canonical locality records with aliases, pincodes, food corridors, signature dishes, creator coverage, source density and freshness. This becomes the geographic spine connecting search, map, dish pages, reels and Crave Hunts.
+## Product implication
+
+The **Patna Locality Atlas** is now the geographic spine of the product. A locality/pincode should eventually resolve to food corridors, dishes, places, media, events, source density, confidence and freshness.
+
+Core relationship:
+
+`place ↔ locality ↔ dish ↔ evidence ↔ media ↔ event ↔ field note`
+
+## Next highest-value build
+
+Replace hardcoded UI cards with structured research data, then build canonical locality and place pages on top of that data. This will remove the remaining gap between the research corpus and the actual product experience.
