@@ -1,0 +1,77 @@
+{
+  "run_id": "2026-09-24-16",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "media integrity was modeled, but locality-level seasonal food corridors and creator-to-place geographic resolution remained underrepresented",
+    "new_metrics": [
+      "seasonal_corridor_density",
+      "creator_to_locality_resolution",
+      "dish_to_contextual_occasion_links",
+      "historical_vs_current_media_separation",
+      "community_lead_corroboration_rate"
+    ],
+    "query_rotation": [
+      "Patna Sabzibagh Ramzan food walk 2026",
+      "Patna seasonal food corridor locality creator 2026",
+      "Patna food blogger Unzip Patna 2026",
+      "Patna litti Reddit Mahavir Mandir 2026",
+      "Patna food creator reels locality dish 2026"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f16-01",
+      "type": "seasonal_food_corridor",
+      "claim": "A March 2026 Delhi Food Walks episode documents Sabzibagh as a Ramadan food hub, with a multi-stop route covering lachcha, Rahmania Hotel, Bismillah Hotel, Kalkatia Bakery, Royal Tea Stall, Dilnawaz Hotel, Manhangu Hotel, Shan-e-Helal Hotel, Paris Darbar and Royal Biryani.",
+      "status": "documented_media_observation",
+      "confidence": "high",
+      "source_ids": ["s16-01"],
+      "product_implication": "Locality pages should support seasonal food states and route-level evidence rather than treating every food corridor as permanently active."
+    },
+    {
+      "id": "f16-02",
+      "type": "creator_media_relationship",
+      "claim": "The Sabzibagh food walk identifies Fahmi from Unzip Patna as the local host, creating a strong creator-to-locality relationship with explicit geographic resolution.",
+      "status": "documented_media_relationship",
+      "confidence": "high",
+      "source_ids": ["s16-01"],
+      "product_implication": "Creator records should capture host/editorial role separately from audience size and link creators to specific locality routes."
+    },
+    {
+      "id": "f16-03",
+      "type": "community_signal",
+      "claim": "A March 2026 Reddit litti hunt identifies Chaurasiya Litti and Gopi Krishna Litti around the Mahavir Mandir/GPO Golambar locality, plus a separate rustic street-style cluster near the RJD office and a softer-style litti signal around Maurya Lok.",
+      "status": "community_signal",
+      "confidence": "medium",
+      "source_ids": ["s16-02"],
+      "product_implication": "Community submissions can provide micro-location leads that are difficult to discover through editorial guides, but each lead should remain unverified until corroborated."
+    },
+    {
+      "id": "f16-04",
+      "type": "creator_ecosystem_signal",
+      "claim": "Current third-party creator indexes show multiple Patna food creators with materially different audience sizes, including @urgeforfood, @patna_paradise_, @bihari_maai, @happiness_on_my_plate and @foodie_robin_.
+",
+      "status": "creator_discovery_signal",
+      "confidence": "medium",
+      "source_ids": ["s16-03","s16-04","s16-05","s16-06"],
+      "product_implication": "Creator ranking should not use follower count alone; Crave Hunt should weight locality resolution, dish specificity, source quality and recency."
+    },
+    {
+      "id": "f16-05",
+      "type": "market_pattern",
+      "claim": "Mapiefood positions a personal food map around saved places, taste profiles and friend-based recommendations, reinforcing the value of persistent personal food memory as a product layer.",
+      "status": "market_pattern",
+      "confidence": "medium",
+      "source_ids": ["s16-07"],
+      "product_implication": "Crave Hunt can differentiate personal saves through evidence-aware context such as dish, locality, season, source and confidence rather than generic restaurant bookmarking."
+    }
+  ],
+  "dedupe_actions": [
+    "No new canonical venue records were created from the Sabzibagh video; its stops are retained as media-linked place leads/observations.",
+    "Creator audience figures remain observations from third-party indexes and are not treated as stable creator attributes.",
+    "The Reddit litti recommendations remain community signals rather than verified place facts."
+  ],
+  "contradictions": [],
+  "next_build": "Add seasonal corridor and route evidence to locality pages, with creator host roles and dated media observations visible separately from permanent place status."
+}
