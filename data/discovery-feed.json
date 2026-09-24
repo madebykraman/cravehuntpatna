@@ -32,6 +32,26 @@
       "source_ids": ["r-patna-boring-2026-06", "a-slurrp-boring-road-2026"]
     },
     {
+      "id": "corridor-exhibition-road",
+      "kind": "corridor",
+      "title": "Exhibition Road",
+      "subtitle": "A high-density commercial food corridor with sweets, breakfast snacks and chaat leads",
+      "area": "Exhibition Road",
+      "tags": ["street food", "sweets", "chaat", "breakfast"],
+      "confidence": "medium",
+      "source_ids": ["a-exhibition-road-guide-2026"]
+    },
+    {
+      "id": "corridor-fraser-road",
+      "kind": "corridor",
+      "title": "Fraser Road",
+      "subtitle": "A central mixed corridor where older eateries and newer food businesses overlap",
+      "area": "Fraser Road",
+      "tags": ["heritage", "restaurants", "street food"],
+      "confidence": "medium",
+      "source_ids": ["a-fraser-road-guide-2026"]
+    },
+    {
       "id": "creator-happiness-on-my-plate",
       "kind": "creator",
       "title": "@happiness_on_my_plate",
@@ -52,6 +72,66 @@
       "source_ids": ["c-urgeforfood-2026"]
     },
     {
+      "id": "creator-adityacooks",
+      "kind": "creator",
+      "title": "@adityacooks",
+      "subtitle": "Patna-based food and home-cooking creator focused on bringing back Bihar recipes",
+      "area": "Patna",
+      "tags": ["Instagram", "Bihar recipes", "home cooking"],
+      "confidence": "medium",
+      "source_ids": ["c-adityacooks-2026"]
+    },
+    {
+      "id": "dish-khichdi-bihar",
+      "kind": "dish",
+      "title": "Bihari Khichdi",
+      "subtitle": "A Bihar Tourism documented staple with regional variations and strong festival context",
+      "area": "Bihar",
+      "tags": ["heritage", "main", "Makar Sankranti"],
+      "confidence": "high",
+      "source_ids": ["o-bihar-tourism-khichdi"]
+    },
+    {
+      "id": "dish-litti-chokha",
+      "kind": "dish",
+      "title": "Litti Chokha",
+      "subtitle": "Bihar Tourism documented Bihari main course built around sattu-filled litti and chokha",
+      "area": "Bihar",
+      "tags": ["heritage", "main", "sattu"],
+      "confidence": "high",
+      "source_ids": ["o-bihar-tourism-litti"]
+    },
+    {
+      "id": "dish-champaran-meat",
+      "kind": "dish",
+      "title": "Champaran Meat · Ahuna",
+      "subtitle": "Champaran-rooted meat tradition prepared in a sealed earthen handi",
+      "area": "Champaran",
+      "tags": ["heritage", "main", "non-veg"],
+      "confidence": "high",
+      "source_ids": ["o-bihar-tourism-champaran-meat"]
+    },
+    {
+      "id": "dish-pittha",
+      "kind": "dish",
+      "title": "Dal Pittha",
+      "subtitle": "Steamed rice-flour dumpling with a spiced lentil filling, documented by Bihar Tourism",
+      "area": "Bihar",
+      "tags": ["heritage", "snack", "steamed"],
+      "confidence": "high",
+      "source_ids": ["o-bihar-tourism-pittha"]
+    },
+    {
+      "id": "dish-tilkut",
+      "kind": "dish",
+      "title": "Tilkut",
+      "subtitle": "Seasonal sesame sweet associated with winter and Makar Sankranti",
+      "area": "Bihar",
+      "tags": ["heritage", "sweet", "seasonal"],
+      "confidence": "high",
+      "source_ids": ["o-bihar-tourism-tilkut"]
+    },
+    {
       "id": "event-saras-mela",
       "kind": "event",
       "title": "Bihar Saras Mela",
@@ -60,16 +140,28 @@
       "tags": ["event", "traditional food", "rural enterprise"],
       "confidence": "high",
       "source_ids": ["n-saras-mela-2026-official-news"]
+    },
+    {
+      "id": "infrastructure-food-hubs",
+      "kind": "corridor",
+      "title": "Proposed Street Food Hubs",
+      "subtitle": "PMC proposal identifies Digha Golambar, Khatal Gali and Mithapur for organised food hubs",
+      "area": "Patna",
+      "tags": ["vending", "infrastructure", "traditional food"],
+      "confidence": "medium",
+      "source_ids": ["n-pmc-food-hubs-2026"]
     }
   ],
   "sources": [
     {
       "id": "r-kankarbagh-guide-2026",
-      "type": "editorial",
+      "type": "article",
       "title": "Kankarbagh Food Guide 2026",
       "url": "https://travell.cc/bihar/kankarbagh-food-guide/",
       "accessed_at": "2026-09-24",
       "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary",
       "claim_scope": "locality food geography and recurring clusters; not a definitive restaurant ranking"
     },
     {
@@ -80,16 +172,44 @@
       "published_at": "2026-03-18",
       "accessed_at": "2026-09-24",
       "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary",
       "claim_scope": "reported redevelopment proposal; treat as changing infrastructure, not current completed inventory"
     },
     {
       "id": "a-slurrp-boring-road-2026",
-      "type": "editorial",
+      "type": "article",
       "title": "Best Street Food Joints Near Boring Road, Patna",
       "url": "https://www.slurrp.com/food-trails/best-places-for-street-food-near-boring-road-patna-1722950210167",
       "accessed_at": "2026-09-24",
       "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary",
       "claim_scope": "Boring Road as a street-food corridor and individual discovery leads"
+    },
+    {
+      "id": "a-exhibition-road-guide-2026",
+      "type": "article",
+      "title": "Exhibition Road Patna Food Guide 2026",
+      "url": "https://travell.cc/bihar/exhibition-road-food-guide/",
+      "published_at": "2026-02-28",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary",
+      "claim_scope": "reported street-food density and dish/stall discovery leads; vendor-level claims require field verification"
+    },
+    {
+      "id": "a-fraser-road-guide-2026",
+      "type": "article",
+      "title": "Fraser Road Patna Food Guide 2026",
+      "url": "https://travell.cc/bihar/fraser-road-food-guide/",
+      "published_at": "2026-02-28",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary",
+      "claim_scope": "reported historical and contemporary food corridor context; historical longevity claims require independent verification"
     },
     {
       "id": "c-happiness-2026",
@@ -98,6 +218,8 @@
       "url": "https://getreelax.com/instagram/happiness_on_my_plate/",
       "accessed_at": "2026-09-24",
       "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead",
       "claim_scope": "creator identity/location and third-party performance metrics; metrics are snapshots, not editorial quality scores"
     },
     {
@@ -107,7 +229,75 @@
       "url": "https://getreelax.com/instagram/urgeforfood",
       "accessed_at": "2026-09-24",
       "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead",
       "claim_scope": "creator identity/location and third-party performance metrics"
+    },
+    {
+      "id": "c-adityacooks-2026",
+      "type": "creator_index",
+      "title": "Aditya Kumar / @adityacooks",
+      "url": "https://socialveins.com/influencer/instagram/adityacooks",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead",
+      "claim_scope": "creator identity, Patna location and stated Bihar-recipe focus; third-party follower metric is a snapshot"
+    },
+    {
+      "id": "o-bihar-tourism-khichdi",
+      "type": "official",
+      "title": "Khichdi · Bihar Tourism",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/khichdi",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary",
+      "claim_scope": "Bihar culinary description, preparation context and Makar Sankranti significance"
+    },
+    {
+      "id": "o-bihar-tourism-litti",
+      "type": "official",
+      "title": "Litti Chokha · Bihar Tourism",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/litti-chokha",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary",
+      "claim_scope": "Bihari cuisine identity, sattu filling, preparation and chokha pairing"
+    },
+    {
+      "id": "o-bihar-tourism-champaran-meat",
+      "type": "official",
+      "title": "Champaran Meat · Bihar Tourism",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/champaran-meat",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary",
+      "claim_scope": "Champaran origin, Ahuna/handi terminology and preparation method"
+    },
+    {
+      "id": "o-bihar-tourism-pittha",
+      "type": "official",
+      "title": "Pittha · Bihar Tourism",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/pittha",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary",
+      "claim_scope": "Bihari pittha description, rice-flour base, lentil filling and preparation"
+    },
+    {
+      "id": "o-bihar-tourism-tilkut",
+      "type": "official",
+      "title": "Tilkut · Bihar Tourism",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/sweet/tilkut",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary",
+      "claim_scope": "seasonality, ingredients, varieties and Makar Sankranti context"
     },
     {
       "id": "n-saras-mela-2026-official-news",
@@ -117,7 +307,21 @@
       "published_at": "2026-09-19",
       "accessed_at": "2026-09-24",
       "confidence": "high",
-      "claim_scope": "event dates, venue, 135 stalls and participating states as reported"
+      "freshness": "current",
+      "source_role": "secondary",
+      "claim_scope": "event dates, venue, 135 stalls, participating states and traditional-food zone as reported"
+    },
+    {
+      "id": "n-pmc-food-hubs-2026",
+      "type": "news",
+      "title": "Patna Municipal Corporation Plans New Food Hub to Promote Bihar’s Traditional Street Food",
+      "url": "https://patnapress.com/patna-food-hub-bihar-street-food-project/",
+      "published_at": "2026-05-15",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary",
+      "claim_scope": "reported proposal for organised food hubs at Digha Golambar, Khatal Gali and Mithapur; approval/current implementation requires verification"
     }
   ]
 }
