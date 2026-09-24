@@ -1,0 +1,107 @@
+{
+  "run_id": "2026-09-24-18",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "The corpus had culinary context and seasonal geography, but event demand signals, operational infrastructure status, and community discovery behaviour were not yet linked as distinct evidence classes.",
+    "new_metrics": [
+      "event_food_economy_signal",
+      "infrastructure_operational_confirmation",
+      "community_repeatability_signal",
+      "entity_state_conflict_rate",
+      "source_lineage_independence",
+      "discovery_to_verification_conversion"
+    ],
+    "query_rotation": [
+      "Square Street Mandiri Patna September 2026 operational",
+      "Patna food hub JP Ganga Path Khatal Gali Mithapur September 2026",
+      "site:reddit.com/r/Patna food Patna September 2026 recommendation",
+      "Patna heritage food tour October 2026 Reddit",
+      "Patna traditional food event Gyan Bhawan September 2026",
+      "creator food map app India creator videos saved places 2026"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f18-01",
+      "type": "infrastructure_state_confirmation",
+      "claim": "Square Street opposite Patna Museum in Chajjubagh was reported by Times of India as inaugurated in February 2026, with construction completed and vendor relocation preparations underway. A separate February report described it as expected to open later that month.",
+      "status": "dated_operational_infrastructure_evidence",
+      "confidence": "high",
+      "source_ids": ["s18-01","s18-02"],
+      "contradiction_note": "The later report is stronger for the inaugurated state; the earlier report should remain historical planning language rather than a current-status source.",
+      "product_implication": "Infrastructure entities need state transitions with effective dates and source precedence rather than a single current boolean."
+    },
+    {
+      "id": "f18-02",
+      "type": "event_food_economy_observation",
+      "claim": "Bihar Saras Mela at Gyan Bhawan is currently documented through September 29 with 135+ stalls and traditional food participation; reporting dated September 23 records more than Rs 68.56 lakh in business across the first three days.",
+      "status": "dated_event_observation",
+      "confidence": "high",
+      "source_ids": ["s18-03","s18-04"],
+      "product_implication": "Event pages can expose footfall and sales observations as dated context, but these must not become permanent demand scores for Patna food."
+    },
+    {
+      "id": "f18-03",
+      "type": "community_discovery_pattern",
+      "claim": "Recent Patna Reddit activity shows users actively discovering places through other Reddit posts, with a September 19 post describing Madras Meals, Lavou Bakery and Alba as discoveries prompted by community recommendations or accidental local discovery. A separate thread is actively soliciting non-veg recommendations and contains conflicting opinions on specific Champaran Meat House branches.",
+      "status": "community_signal",
+      "confidence": "medium",
+      "source_ids": ["s18-05","s18-06"],
+      "product_implication": "Community discovery should be modelled as a repeatable evidence chain: source post -> recommendation -> visit report -> place/dish -> subsequent corroboration."
+    },
+    {
+      "id": "f18-04",
+      "type": "food_tour_signal",
+      "claim": "A September Reddit listing advertises an October 4 Patna Heritage & Food Tour combining heritage sites, breakfast, lunch, snacks and cultural conversations; the r/Patna thread shows an initial sceptical reply followed by the organiser reporting that seats had already been booked.",
+      "status": "community_event_lead",
+      "confidence": "medium",
+      "source_ids": ["s18-07","s18-08"],
+      "product_implication": "Food tours are a distinct discovery entity that can bridge heritage places, meals, routes and community demand without becoming restaurant records."
+    },
+    {
+      "id": "f18-05",
+      "type": "culinary_geography_context",
+      "claim": "Bihar Foundation explicitly identifies Khoye-Ki-Laai with Barh in Patna district, while current Reddit discussion continues to describe broader Bihar culinary diversity by region rather than as one homogeneous Patna cuisine.",
+      "status": "canonical_regional_context_plus_community_signal",
+      "confidence": "high",
+      "source_ids": ["s18-09","s18-10"],
+      "product_implication": "Dish records should preserve regional origin and district relationship separately from Patna availability and vendor evidence."
+    },
+    {
+      "id": "f18-06",
+      "type": "market_pattern",
+      "claim": "Waybites continues to represent the creator-video-to-local-food-map pattern, reinforcing that persistent geographic resolution of social food content is a meaningful product primitive.",
+      "status": "market_pattern",
+      "confidence": "high",
+      "source_ids": ["s18-11"],
+      "product_implication": "Crave Hunt should focus on evidence lineage and Patna-specific context as the differentiator instead of generic save/map functionality."
+    }
+  ],
+  "dedupe_actions": [
+    "Square Street was not created as a duplicate venue; it remains infrastructure/place-state evidence.",
+    "Saras Mela remains one event entity with dated observations, not multiple event records from repeated reports.",
+    "Reddit venue mentions remain community evidence and were not promoted to canonical places without independent verification.",
+    "Khoye-Ki-Laai was treated as an existing canonical Bihar dish with stronger district provenance, not a new duplicate dish."
+  ],
+  "contradictions": [
+    {
+      "entity": "Square Street",
+      "issue": "February sources differ in wording between planned opening and inaugurated state.",
+      "resolution": "Use the later Times of India report for the historical inaugurated state and preserve the earlier article as prior planning evidence. Do not infer current vendor occupancy from either source alone."
+    },
+    {
+      "entity": "Champaran Meat House branches",
+      "issue": "Recent Reddit commenters disagree on which branch is most consistent and on the quality of the Kankarbagh branch.",
+      "resolution": "Retain branch-level community observations separately; do not collapse them into one brand-level quality claim."
+    }
+  ],
+  "implementation": [
+    "Add an evidence-chain concept linking discovery source, entity mention, visit report and corroboration.",
+    "Add event_food_economy observations as a dated subtype rather than a venue popularity score.",
+    "Add food_tour as a distinct entity type connecting heritage sites, meals, routes and organisers.",
+    "Add branch-level identity so conflicting community reports about multi-branch brands do not contaminate brand-level confidence.",
+    "Strengthen infrastructure lifecycle fields with effective_date, state_source_priority and current_confirmation_required."
+  ],
+  "next_build": "Implement the evidence-chain and branch-aware entity model, then expose it through public evidence timelines and recheck queues."
+}
