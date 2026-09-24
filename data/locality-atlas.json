@@ -1,20 +1,23 @@
 {
   "research_date": "2026-09-24",
-  "method": "Canonical geography layer built from recurring food-corridor signals, explicit pincode/address evidence, and official place references. A locality is not treated as a food corridor unless a source supports that relationship.",
+  "method": "Canonical geography layer built from recurring food-corridor signals, explicit pincode/address evidence, and official place references. A locality is not treated as a food corridor unless a source supports that relationship. Postal geography can be multi-valued and is retained at sub-area level.",
   "localities": [
-    {"id":"loc-new-market","name":"New Market","pincode":"800001","food_role":"legacy_market_zone","food_signals":["litti chokha"],"evidence":["r-patna-food-2026-09"]},
-    {"id":"loc-old-museum-road","name":"Old Museum Road / Khao Gali","pincode":"800001","food_role":"street_food_corridor","food_signals":["street snacks","chaat","litti"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"]},
-    {"id":"loc-boring-road","name":"Boring Road","pincode":"800001","food_role":"mixed_food_corridor","food_signals":["street food","litti","contemporary dining"],"evidence":["r-patna-food-2026-09","r-patna-boring-2026-06"]},
-    {"id":"loc-maurya-lok","name":"Maurya Lok","pincode":"800001","food_role":"legacy_food_corridor","food_signals":["street food"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"]},
-    {"id":"loc-mandiri-chhajjubag","name":"Mandiri–Chhajjubag","pincode":"800004","food_role":"emerging_vending_zone","food_signals":["organised street food"],"evidence":["n-square-street-2026-02"]},
-    {"id":"loc-kankarbagh","name":"Kankarbagh","pincode":"800020","food_role":"neighbourhood_food_zone","food_signals":["local street food"],"evidence":["r-patna-food-2026-09"]},
-    {"id":"loc-s-k-puri","name":"S.K. Puri","pincode":"800013","food_role":"established_restaurant_zone","food_signals":["sweets","restaurant dining"],"evidence":["map-harilals-2026-09"]},
-    {"id":"loc-patna-city","name":"Patna City / old Patna","pincode":"800008","food_role":"heritage_food_context","food_signals":["heritage food research"],"evidence":["bihar-tourism-dutch-building","bihar-tourism-khuda-baksh"]},
-    {"id":"loc-danapur","name":"Danapur","pincode":"801503","food_role":"outer_patna_food_context","food_signals":["food-and-heritage context"],"evidence":["bihar-tourism-handi-sahib"]}
+    {"id":"loc-new-market","name":"New Market","pincodes":["800001"],"food_role":"legacy_market_zone","food_signals":["litti chokha"],"evidence":["r-patna-food-2026-09"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-old-museum-road","name":"Old Museum Road / Khao Gali","pincodes":["800001"],"food_role":"street_food_corridor","food_signals":["street snacks","chaat","litti"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-boring-road","name":"Boring Road","pincodes":["800010","800013"],"food_role":"mixed_food_corridor","food_signals":["street food","litti","contemporary dining"],"evidence":["r-patna-food-2026-09","r-patna-boring-2026-06","a-slurrp-boring-road-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Boring Road postal boundaries vary by segment; do not expose one pincode as universal"]},
+    {"id":"loc-maurya-lok","name":"Maurya Lok","pincodes":["800001"],"food_role":"legacy_food_corridor","food_signals":["street food"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-exhibition-road","name":"Exhibition Road","pincodes":["800001"],"food_role":"high_density_street_food_corridor","food_signals":["samosa","kachori","chaat","jalebi","sweets"],"evidence":["a-exhibition-road-guide-2026"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-fraser-road","name":"Fraser Road","pincodes":["800001"],"food_role":"central_mixed_food_corridor","food_signals":["restaurants","heritage_context","street food"],"evidence":["a-fraser-road-guide-2026"],"confidence":"low","last_verified":"2026-09-24"},
+    {"id":"loc-mandiri-chhajjubag","name":"Mandiri–Chhajjubag","pincodes":["800004"],"food_role":"emerging_vending_zone","food_signals":["organised street food"],"evidence":["n-square-street-2026-02"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-digha","name":"Digha Golambar / JP Ganga Path","pincodes":[],"food_role":"emerging_riverfront_food_zone","food_signals":["riverfront vending","proposed food hub","cafes"],"evidence":["n-ganga-path-food-2026","n-pmc-food-hubs-2026"],"confidence":"medium","last_verified":"2026-09-24"},
+    {"id":"loc-kankarbagh","name":"Kankarbagh","pincodes":["800020","800016","800026"],"food_role":"neighbourhood_food_zone","food_signals":["local street food","cafes","neighbourhood dining"],"evidence":["r-patna-food-2026-09","r-kankarbagh-guide-2026","postal-kankarbagh-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Kankarbagh is not safely represented by one pincode; postal sources show multiple sub-area codes"]},
+    {"id":"loc-s-k-puri","name":"S.K. Puri / Sri Krishna Puri","pincodes":["800010","800013","800028"],"food_role":"established_restaurant_and_cafe_zone","food_signals":["cafes","sweets","restaurant dining","chaat"],"evidence":["map-harilals-2026-09","r-patna-aesthetics-2026-02","r-patna-street-2026-06","postal-sk-puri-2026"],"confidence":"medium","last_verified":"2026-09-24","contradictions":["Sri Krishna Puri postal codes vary by sub-area; use exact address before attaching a place to a pincode"]},
+    {"id":"loc-patna-city","name":"Patna City / old Patna","pincodes":["800008"],"food_role":"heritage_food_context","food_signals":["heritage food research"],"evidence":["bihar-tourism-dutch-building","bihar-tourism-khuda-baksh"],"confidence":"low","last_verified":"2026-09-24"},
+    {"id":"loc-danapur","name":"Danapur","pincodes":["801503"],"food_role":"outer_patna_food_context","food_signals":["food-and-heritage context"],"evidence":["bihar-tourism-handi-sahib"],"confidence":"low","last_verified":"2026-09-24"}
   ],
   "unverified_geographies": [
-    {"name":"Khajpura","pincode":"800014","reason":"appears in earlier UI seed data, but current research pass did not establish a strong corridor-level food claim"},
-    {"name":"Rani Ghat / NIT Patna area","pincode":"800006","reason":"map discovery exists, but current pass did not establish a meaningful food-corridor signal"}
+    {"name":"Khajpura","pincodes":["800014"],"reason":"appears in earlier UI seed data, but current research pass did not establish a strong corridor-level food claim"},
+    {"name":"Rani Ghat / NIT Patna area","pincodes":["800006"],"reason":"map discovery exists, but current pass did not establish a meaningful food-corridor signal"}
   ],
   "next_metrics": [
     "coverage_by_pincode",
@@ -23,6 +26,9 @@
     "source_age_days",
     "community_signal_vs_editorial_fact_ratio",
     "creator_media_coverage_by_locality",
-    "unresolved_entity_aliases"
-  ]
+    "unresolved_entity_aliases",
+    "pincode_conflict_rate",
+    "corridor_claims_with_two_or_more_independent_sources"
+  ],
+  "new_research_observation": "Postal geography is itself an evidence problem. Large Patna neighbourhood labels such as Kankarbagh, Boring Road and Sri Krishna Puri span multiple postal areas. The product should therefore search and display exact place-address pincode relationships rather than use locality-level pincode shortcuts."
 }
