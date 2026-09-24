@@ -1,0 +1,68 @@
+{
+  "run_id":"2026-09-24-05",
+  "research_date":"2026-09-24",
+  "strategy_change":"Shifted from entity-count growth toward geographic data integrity: pincode conflict detection, corridor corroboration, temporal event freshness, and community-to-fact separation.",
+  "new_signals":[
+    {
+      "entity":"Exhibition Road",
+      "type":"food_corridor",
+      "finding":"A 2026 local guide describes a dense street-food corridor with samosa, kachori, chaat, jalebi and sweets.",
+      "confidence":"medium",
+      "source_ids":["a-exhibition-road-guide-2026"],
+      "note":"Secondary source only; vendor-level claims require field verification."
+    },
+    {
+      "entity":"Kankarbagh",
+      "type":"geography",
+      "finding":"Postal evidence shows Kankarbagh is not safely represented by a single pincode; different sub-areas are associated with 800020, 800016 and 800026.",
+      "confidence":"medium",
+      "source_ids":["postal-kankarbagh-2026"],
+      "note":"Do not infer a place's pincode from the locality label alone."
+    },
+    {
+      "entity":"Sri Krishna Puri / S.K. Puri",
+      "type":"geography",
+      "finding":"Postal sources show multiple codes across Sri Krishna Puri sub-areas, including 800010 and 800028, while Patliputra-area records use 800013.",
+      "confidence":"medium",
+      "source_ids":["postal-sk-puri-2026"],
+      "note":"Exact address should determine pincode."
+    },
+    {
+      "entity":"Digha Golambar / JP Ganga Path",
+      "type":"food_infrastructure",
+      "finding":"Reported food-hub and riverfront vending plans make Digha a changing food-infrastructure zone rather than a stable restaurant list.",
+      "confidence":"medium",
+      "source_ids":["n-ganga-path-food-2026","n-pmc-food-hubs-2026"],
+      "note":"Track proposed, under-construction and operating states separately."
+    },
+    {
+      "entity":"Bihar Saras Mela 2026",
+      "type":"event",
+      "finding":"The Gyan Bhawan event is running Sep 20–29 with 135+ stalls; later reporting says sales crossed Rs 68.56 lakh in its first three days.",
+      "confidence":"high",
+      "source_ids":["n-saras-mela-2026-official-news","n-saras-mela-sales-2026"],
+      "note":"Sales are reported figures, not independently audited."
+    },
+    {
+      "entity":"Patna food sentiment",
+      "type":"community_signal",
+      "finding":"A Reddit thread shows frustration with sameness in the local scene and nostalgia for a closed cloud kitchen, while another thread produces dish-level locality leads across Patliputra, S.K. Puri, Ashiana, Maurya Lok and Kankarbagh.",
+      "confidence":"medium",
+      "source_ids":["r-foodie-frustration-2026","r-patna-street-2026-06"],
+      "note":"Useful for hunt generation and gap detection, not objective ranking."
+    }
+  ],
+  "contradictions_found":[
+    "Kankarbagh pincode cannot be modeled as one value.",
+    "Sri Krishna Puri/Boring Road postal boundaries vary by segment.",
+    "Community recommendations conflict on restaurant quality and should remain sentiment records until corroborated.",
+    "Proposed food hubs must not be represented as operating food destinations."
+  ],
+  "product_changes": [
+    "Locality schema now supports multiple pincodes.",
+    "Claims can now be explicitly contradicted instead of silently overwritten.",
+    "Postal sources are first-class provenance records.",
+    "Research metrics now include pincode conflict rate and multi-source corridor corroboration."
+  ],
+  "next_high_value_build":"Locality Atlas UI with exact-address pincode handling, corridor evidence count, community-signal count, creator coverage, live/past event state, and unresolved-claim indicators."
+}
