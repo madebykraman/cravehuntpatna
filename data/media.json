@@ -1,0 +1,10 @@
+{
+  "updated_at":"2026-09-24",
+  "records":[
+    {"id":"media-search-patna-instagram","type":"discovery_lead","platform":"Instagram","query":"Patna food","notes":"Community discussion identifies Garda Patna Wale and WhatPatnaeats as food-content leads. Treat account identity and current activity as unverified until direct profile/source capture.","source_id":"r-bihar-food-account-2024"},
+    {"id":"media-search-patna-youtube","type":"discovery_lead","platform":"YouTube","query":"Patna street food 2026","notes":"Search queue for creator/video ingestion. Individual videos should be added only with canonical URLs and publication dates."}
+  ],
+  "sources":[
+    {"id":"r-bihar-food-account-2024","type":"reddit","title":"Is there any food related account for patna on Instagram","url":"https://www.reddit.com/r/bihar/comments/1gwbavk","published_at":"2024-11-21","accessed_at":"2026-09-24","confidence":"medium"}
+  ]
+}
