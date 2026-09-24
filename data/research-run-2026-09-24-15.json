@@ -1,0 +1,78 @@
+{
+  "run_id": "2026-09-24-15",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "corridor and event lifecycle coverage was stronger than media provenance and food-culture event coverage",
+    "new_metrics": [
+      "media_authenticity_conflict_rate",
+      "official_vs_secondary_event_evidence",
+      "food_culture_event_density",
+      "creator_content_location_resolution",
+      "current_food_service_risk_signal"
+    ],
+    "query_rotation": [
+      "Patna traditional food event Agamkuan September 2026",
+      "Patna food viral video fact check vendor September 2026",
+      "Patna creator food video location dish 2026",
+      "Patna home food tiffin discovery product 2026",
+      "Patna food heritage tourism traditional dishes official"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f15-01",
+      "type": "food_culture_event",
+      "claim": "A traditional-food and millet mini expo was held at RARI Agamkuan, Patna for the 11th Ayurveda Day, showcasing local food items, millets and nutrition-focused preparations.",
+      "status": "official_reported_event",
+      "confidence": "high",
+      "source_ids": ["s15-01","s15-02"],
+      "product_implication": "Food-event discovery should include institutional cultural/nutrition events, not only commercial fairs and restaurant events."
+    },
+    {
+      "id": "f15-02",
+      "type": "media_integrity",
+      "claim": "A viral video claimed to show a Patna street-food vendor being assaulted, but a current fact-check reports that the footage was scripted; this creates a concrete false-positive risk for food-media ingestion.",
+      "status": "fact_checked_false_context",
+      "confidence": "high",
+      "source_ids": ["s15-03","s15-04"],
+      "product_implication": "Media records need authenticity/context status so viral food videos cannot silently become factual place or vendor evidence."
+    },
+    {
+      "id": "f15-03",
+      "type": "creator_media_history",
+      "claim": "The 2024 Patna 'Dosa Printing Machine' viral video demonstrates that creator content can carry unusually strong geographic specificity: a vendor near Patna College was explicitly located in reporting and amplified through Instagram/X.",
+      "status": "historical_media_signal",
+      "confidence": "high",
+      "source_ids": ["s15-05"],
+      "product_implication": "Resolved media links should store exact geographic resolution and date separately from creator reach metrics."
+    },
+    {
+      "id": "f15-04",
+      "type": "market_pattern",
+      "claim": "TiffinPatna positions home-cooked meals, catering and hostel mess discovery as a Patna-specific food marketplace, showing a non-restaurant food layer adjacent to Crave Hunt's street-food intelligence.",
+      "status": "market_pattern",
+      "confidence": "medium",
+      "source_ids": ["s15-06"],
+      "product_implication": "Crave Hunt's long-term taxonomy should allow food experiences beyond restaurants, while keeping its editorial focus on discovery and evidence rather than becoming a delivery directory."
+    },
+    {
+      "id": "f15-05",
+      "type": "canonical_food_context",
+      "claim": "Bihar Tourism continues to document regional sweets such as Tilkut and Balushahi as culturally specific foods, reinforcing the need to keep culinary identity separate from current Patna venue availability.",
+      "status": "official_culinary_reference",
+      "confidence": "high",
+      "source_ids": ["s15-07","s15-08"],
+      "product_implication": "Canonical dish records should retain geographic origin/context even when the current Patna availability graph changes."
+    }
+  ],
+  "dedupe_actions": [
+    "No new canonical venue was created for the RARI event; it is stored as a dated event observation.",
+    "The scripted Patna vendor video is treated as media-integrity evidence, not a vendor/place fact.",
+    "The historical Dosa Printing Machine media lead is retained as a media relationship and not promoted to a current venue record without fresh operating evidence."
+  ],
+  "contradictions": [
+    "Current viral food-video reporting can conflict with the actual status/context of the footage; authenticity is now a separate media claim from geographic resolution."
+  ],
+  "next_build": "Add media authenticity/context states and evidence-source roles to media records, then surface an evidence timeline that distinguishes verified food facts, community signals, discovery leads and fact-checked media context."
+}
