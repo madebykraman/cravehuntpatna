@@ -9,18 +9,19 @@
     "contradictions": "conflicting claims are preserved as unresolved evidence rather than silently collapsed",
     "pincodes": "a locality may map to multiple pincodes; retain sub-area postal evidence instead of forcing one canonical pincode",
     "taxonomy": "canonical dishes and culinary identities are separate from current venue availability",
-    "temporal_evidence": "changing facts such as price, opening status, creator metrics, event performance and corridor status are stored as dated observations rather than overwriting history"
+    "temporal_evidence": "changing facts such as price, opening status, creator metrics, event performance and corridor status are stored as dated observations rather than overwriting history",
+    "media_relationships": "creator content is evidence or discovery context until its referenced place or dish is independently resolved"
   },
   "place": {
     "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
     "area":"string","pincodes":["string"],"address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
     "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated|research",
     "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"],"claim_status":"verified|corroborated|community_signal|unverified",
-    "contradictions":["claim_id"],"observations":["observation_id"]
+    "contradictions":["claim_id"],"observations":["observation_id"],"media_links":["media_link_id"]
   },
   "dish": {
     "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
-    "heritage_note":"string","geographic_context":"string","patna_relevance":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown","observations":["observation_id"]
+    "heritage_note":"string","geographic_context":"string","patna_relevance":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown","observations":["observation_id"],"media_links":["media_link_id"]
   },
   "source": {
     "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal|event_listing",
@@ -47,5 +48,14 @@
   "observation": {
     "id":"string","entity_id":"string","field":"string","value":null,"observed_at":"YYYY-MM-DD","source_ids":["source_id"],
     "status":"observed|reported|verified|community_signal","confidence":"high|medium|low","supersedes":null,"notes":"string"
+  },
+  "creator": {
+    "id":"string","name":"string","handles":["string"],"home_area":"string","platforms":["instagram|youtube|x"],
+    "sources":["source_id"],"confidence":"high|medium|low","observations":["observation_id"],"media_links":["media_link_id"]
+  },
+  "media_link": {
+    "id":"string","creator_id":"creator_id","source_id":"source_id","entity_ids":["place_id|dish_id|locality_id"],
+    "relationship":"featured_place|featured_dish|mentions_locality|discovery_lead","resolved":"resolved|partial|unresolved",
+    "confidence":"high|medium|low","observed_at":"YYYY-MM-DD","notes":"string"
   }
 }
