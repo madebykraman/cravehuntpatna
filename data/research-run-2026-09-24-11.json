@@ -1,0 +1,67 @@
+{
+  "run_id": "2026-09-24-11",
+  "research_date": "2026-09-24",
+  "strategy_delta": {
+    "focus": ["fresh operating-state signals", "micro-place discovery", "event-to-food conversion", "creator signal quality", "product differentiation"],
+    "query_shift": "Reduced generic Patna restaurant queries and increased exact-area, current-status, event-commerce and creator-quality queries to avoid repeating corridor summaries.",
+    "metrics": ["novel_entity", "independent_source_count", "freshness_days", "claim_type", "operating_state_risk", "editorial_specificity"]
+  },
+  "material_findings": [
+    {
+      "id": "place-a1-chandrakala-shop",
+      "entity_type": "place",
+      "name": "A 1 Chandrakala Shop",
+      "area": "Fraser Road Area",
+      "claim": "A current third-party listing places the shop on Chandrakala Gali opposite Pillar 6 in New Market and categorizes it as street food.",
+      "status": "discovery_lead",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_ids": ["m-a1-chandrakala-2026"],
+      "implementation": "Keep as a micro-place lead under the Fraser Road/New Market geography; require independent verification before editorial promotion."
+    },
+    {
+      "id": "event-saras-mela-2026-live-observation",
+      "entity_type": "event",
+      "name": "Bihar Saras Mela 2026",
+      "claim": "Current reporting says the fair continues through September 29, 2026; one report states more than Rs 68.56 lakh business in the first three days and more than 135 stalls from 15 states.",
+      "status": "reported",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_ids": ["n-saras-mela-2026-current", "n-saras-mela-2026-24k"],
+      "implementation": "Store sales and visitor figures as dated reported observations, never as static event facts."
+    },
+    {
+      "id": "creator-urgeforfood",
+      "entity_type": "creator",
+      "name": "@urgeforfood",
+      "claim": "A third-party creator index currently identifies Shruti as a Patna food blogger and reports 19.9K followers, 1.9K posts and 5.29% engagement; hashtags include Bihar food and local/festival dishes.",
+      "status": "discovery_lead",
+      "confidence": "medium",
+      "source_ids": ["c-urgeforfood-2026-current"],
+      "implementation": "Separate creator reach metrics from editorial relevance; use cuisine/location tags as discovery evidence, not ranking evidence."
+    },
+    {
+      "id": "corridor-square-street-status",
+      "entity_type": "corridor",
+      "name": "Square Street, Mandiri-Chhajjubag",
+      "claim": "A February 2026 report described the PMC food vending zone as planned to open by month-end; this run found no sufficiently strong fresh source confirming its completed operating state.",
+      "status": "unresolved",
+      "confidence": "medium",
+      "source_ids": ["n-square-street-2026"],
+      "implementation": "Move to a recheck queue rather than representing it as an established food destination."
+    }
+  ],
+  "contradictions_and_gaps": [
+    "Current event reporting is richer than the existing static event record; the corpus needs event observation timelines.",
+    "Micro-place discovery is ahead of independent verification; third-party listings should remain discovery leads.",
+    "Planned vending zones continue to lack reliable completion-state evidence; proposal and operational states must remain distinct.",
+    "Creator indexes expose useful local food hashtags but are not reliable proxies for editorial quality or authenticity."
+  ],
+  "product_opportunities": [
+    "Add a visible 'last checked' and 'state evidence' layer to place and corridor pages.",
+    "Add event snapshots for visitor/sales observations with source attribution.",
+    "Add creator-to-dish and creator-to-locality edges, while keeping reach metrics observational.",
+    "Add a 'research lead' state for newly discovered micro-places before publication."
+  ],
+  "next_priority": "Implement entity state timelines and a research/recheck queue in the product UI before adding another broad restaurant batch."
+}
