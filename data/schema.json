@@ -1,7 +1,31 @@
 {
-  "place": {"id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution","area":"string","pincode":"string","address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],"price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated","confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"]},
-  "dish": {"id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert","heritage_note":"string","places":["place_id"],"sources":["source_id"]},
-  "source": {"id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive","title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,"claims":["string"],"confidence":"high|medium|low"},
-  "event": {"id":"string","name":"string","start":null,"end":null,"venue":"string","description":"string","url":"string","source_id":"string","status":"upcoming|ongoing|past|unknown"},
-  "hunt": {"id":"string","submitted_at":"YYYY-MM-DD","request":"string","area":null,"source_url":null,"status":"new|researching|verified|published|rejected","notes":"string"}
+  "research_principles": {
+    "confidence": "confidence describes evidence quality, not popularity",
+    "freshness": "freshness is tracked separately from confidence",
+    "provenance": "every publishable claim must point to one or more source ids",
+    "sentiment": "community sentiment must not be promoted to objective fact without corroboration"
+  },
+  "place": {
+    "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution",
+    "area":"string","pincode":"string","address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
+    "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated",
+    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"]
+  },
+  "dish": {
+    "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
+    "heritage_note":"string","places":["place_id"],"sources":["source_id"]
+  },
+  "source": {
+    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news",
+    "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
+    "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown"
+  },
+  "event": {
+    "id":"string","name":"string","start":null,"end":null,"venue":"string","description":"string","url":"string",
+    "source_id":"string","status":"upcoming|ongoing|past|unknown"
+  },
+  "hunt": {
+    "id":"string","submitted_at":"YYYY-MM-DD","request":"string","area":null,"source_url":null,
+    "status":"new|researching|verified|published|rejected","notes":"string"
+  }
 }
