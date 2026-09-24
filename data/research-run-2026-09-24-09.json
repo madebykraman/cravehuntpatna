@@ -1,0 +1,102 @@
+{
+  "run_id": "2026-09-24-09",
+  "research_date": "2026-09-24",
+  "strategy": {
+    "shift": "coverage-gap and temporal-signal pass",
+    "query_mix": [
+      "current Patna street-food corridor guides",
+      "Patna event food and traditional products",
+      "Bihar culinary heritage with current 2026 signals",
+      "food discovery products with dish-level and social graph patterns",
+      "community-led Patna food recommendations"
+    ],
+    "new_metrics": [
+      "independent_source_overlap",
+      "claim_decay_days",
+      "time_series_observation_count",
+      "event_velocity_signal",
+      "dish_to_locality_link_density",
+      "community_to_editorial corroboration_rate"
+    ]
+  },
+  "findings": [
+    {
+      "id": "finding-exhibition-road-density-2026-09",
+      "type": "corridor_signal",
+      "entity": "loc-exhibition-road",
+      "statement": "Two independent 2026 editorial guides describe Exhibition Road as a dense street-food destination and identify overlapping dish categories including samosa, kachori, chaat, jalebi and sweets.",
+      "status": "corroborated",
+      "confidence": "medium",
+      "source_ids": ["a-exhibition-road-guide-2026", "a-exhibition-road-travell-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    },
+    {
+      "id": "finding-saras-mela-velocity-2026-09",
+      "type": "event_signal",
+      "entity": "event-saras-mela-2026",
+      "statement": "Bihar Saras Mela at Gyan Bhawan is an active food and rural-product event through September 29, 2026; reporting on September 23 put cumulative business above Rs 68.56 lakh after three days.",
+      "status": "reported",
+      "confidence": "high",
+      "source_ids": ["n-saras-mela-sales-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24",
+      "note": "Sales are reported event figures, not independently audited financial data."
+    },
+    {
+      "id": "finding-eatables-dish-review-model-2026",
+      "type": "product_pattern",
+      "entity": "product-eatables",
+      "statement": "Eatables positions dish-level discovery around reviews from people who actually ate the dish, neighbourhood activity, personal must-try lists and non-paid ranking.",
+      "status": "observed",
+      "confidence": "high",
+      "source_ids": ["p-eatables-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    },
+    {
+      "id": "finding-hogr-social-graph-2026",
+      "type": "product_pattern",
+      "entity": "product-hogr",
+      "statement": "HOGR combines friend and influencer recommendations, social feeds, food video content and incentives for recommendations.",
+      "status": "observed",
+      "confidence": "high",
+      "source_ids": ["p-hogr-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    },
+    {
+      "id": "finding-beli-list-map-model-2026",
+      "type": "product_pattern",
+      "entity": "product-beli",
+      "statement": "Beli combines personal restaurant history, saved lists, maps and friend recommendations.",
+      "status": "observed",
+      "confidence": "high",
+      "source_ids": ["p-beli-2026"],
+      "freshness": "current",
+      "checked_at": "2026-09-24"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "contradiction-exhibition-road-density",
+      "entity": "loc-exhibition-road",
+      "statement": "The corridor-density claim is supported by two editorial guides but neither is a municipal or mapping authority; retain medium confidence rather than upgrading to high confidence."
+    },
+    {
+      "id": "contradiction-saras-sales-auditability",
+      "entity": "event-saras-mela-2026",
+      "statement": "Current sales figures are reported by local media and should not be treated as audited financial totals."
+    }
+  ],
+  "dedupe_actions": [
+    "Did not create a second Exhibition Road locality entity.",
+    "Did not duplicate Saras Mela; appended a new time-stamped observation to the same event concept.",
+    "Kept Beli, HOGR and Eatables as product-pattern entities rather than Patna food entities."
+  ],
+  "implementation": {
+    "schema_change": "Add observation as a first-class temporal evidence record.",
+    "product_change": "Model event, creator, place and locality metrics as dated observations so changing values do not overwrite history.",
+    "next_ui": "Add evidence timeline to locality, dish and event pages."
+  }
+}
