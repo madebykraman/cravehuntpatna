@@ -1,0 +1,37 @@
+{
+  "version": "0.1",
+  "purpose": "Separate what a dish is culturally from when, why and where it is currently available.",
+  "dimensions": [
+    {
+      "key": "identity",
+      "examples": ["dish", "sweet", "snack", "beverage", "meal"]
+    },
+    {
+      "key": "occasion",
+      "examples": ["Chhath Puja", "Makar Sankranti", "Ramadan", "fair", "food walk"]
+    },
+    {
+      "key": "season",
+      "examples": ["winter", "summer", "monsoon", "festival period"]
+    },
+    {
+      "key": "ritual_role",
+      "examples": ["prasad", "festival preparation", "fasting-related", "ceremonial"]
+    },
+    {
+      "key": "availability_scope",
+      "examples": ["Bihar-wide", "Patna district", "Patna locality", "specific place", "event-only", "seasonal"]
+    },
+    {
+      "key": "evidence_state",
+      "examples": ["canonical", "current_patna_evidence", "dated_observation", "community_signal", "discovery_lead"]
+    }
+  ],
+  "rules": [
+    "Cultural or ritual association does not imply current Patna availability.",
+    "A current Patna vendor claim requires separate place-level evidence.",
+    "Event-only food availability must remain time-bounded.",
+    "Multiple sources repeating the same upstream claim do not count as independent corroboration.",
+    "Community and creator signals can discover entities without automatically upgrading confidence."
+  ]
+}
