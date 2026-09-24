@@ -1,0 +1,104 @@
+{
+  "run_id": "2026-09-24-19",
+  "sources": [
+    {
+      "source_id": "s19-01",
+      "title": "Litti Hut, Keshari Nagar, Patna - Magicpin",
+      "url": "https://magicpin.in/Patna/Keshari-Nagar/Restaurant/Litti-Hut/store/447023",
+      "source_type": "aggregator_listing",
+      "role": "operational_state_signal",
+      "published_or_updated": "2026-06",
+      "confidence_ceiling": "medium",
+      "independence_group": "magicpin",
+      "notes": "Listing contains contradictory shutdown and open-now states. Use for conflict detection, not authoritative current status."
+    },
+    {
+      "source_id": "s19-02",
+      "title": "D.K Litti, Patna One Mall - Magicpin",
+      "url": "https://magicpin.in/Patna/Patna-One-Mall/Restaurant/D.k-Litti/store/447247",
+      "source_type": "aggregator_listing",
+      "role": "new_place_lead",
+      "published_or_updated": "2026-07",
+      "confidence_ceiling": "medium",
+      "independence_group": "magicpin",
+      "notes": "Provides address, menu prices, hours and a verified-listing marker; independent current verification still required."
+    },
+    {
+      "source_id": "s19-03",
+      "title": "Patna's Paradise creator profile - Socialveins",
+      "url": "https://socialveins.com/influencer/instagram/patna_paradise_",
+      "source_type": "creator_database",
+      "role": "creator_identity_and_audience_signal",
+      "published_or_updated": "2026-09",
+      "confidence_ceiling": "medium",
+      "independence_group": "socialveins",
+      "notes": "Third-party follower and category metadata; not an authority assessment."
+    },
+    {
+      "source_id": "s19-04",
+      "title": "Patna's Paradise creator profile - Reelax",
+      "url": "https://getreelax.com/instagram/patna_paradise_/",
+      "source_type": "creator_analytics",
+      "role": "creator_content_and_metric_signal",
+      "published_or_updated": "2026-09",
+      "confidence_ceiling": "low",
+      "independence_group": "reelax",
+      "notes": "Metrics can be stale or platform-derived; retain only as dated observations."
+    },
+    {
+      "source_id": "s19-05",
+      "title": "Bihar Foundation - Cuisines",
+      "url": "https://biharfoundation.in/know-your-bihar/art-culture/cuisines",
+      "source_type": "institutional_reference",
+      "role": "regional_culinary_provenance",
+      "published_or_updated": "undated_current_page",
+      "confidence_ceiling": "high",
+      "independence_group": "bihar_foundation",
+      "notes": "Directly identifies Khoye-Ki-Laai with Barh in Patna district."
+    },
+    {
+      "source_id": "s19-06",
+      "title": "Beyond litti-chokha: Bihar govt releases official list of 18 delicacies to showcase its cuisine - Indian Express",
+      "url": "https://indianexpress.com/article/cities/patna/litti-chokha-bihar-govt-official-list-18-delicacies-showcase-cuisine-10536491/",
+      "source_type": "news_primary_reporting",
+      "role": "government_culinary_taxonomy",
+      "published_or_updated": "2026",
+      "confidence_ceiling": "high",
+      "independence_group": "indian_express",
+      "notes": "Reports Bihar government's official 18-delicacy showcase list."
+    },
+    {
+      "source_id": "s19-07",
+      "title": "Bihar Tourism - Khichdi",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/khichdi",
+      "source_type": "tourism_reference",
+      "role": "canonical_food_context",
+      "published_or_updated": "current_page",
+      "confidence_ceiling": "high",
+      "independence_group": "bihar_tourism",
+      "notes": "Used as a cross-check for official culinary-context modelling; not treated as venue evidence."
+    },
+    {
+      "source_id": "s19-08",
+      "title": "Exhibition Road Patna Food Guide 2026 - Travell",
+      "url": "https://travell.cc/bihar/exhibition-road-food-guide/",
+      "source_type": "editorial_guide",
+      "role": "corridor_discovery_lead",
+      "published_or_updated": "2026-02-28",
+      "confidence_ceiling": "low",
+      "independence_group": "travell",
+      "notes": "Contains strong subjective density and quality claims without transparent methodology; useful for leads, not confidence upgrades."
+    },
+    {
+      "source_id": "s19-09",
+      "title": "Patna's Paradise - indexed food video analytics",
+      "url": "https://getreelax.com/instagram/patna_paradise_/",
+      "source_type": "creator_analytics",
+      "role": "media_topic_signal",
+      "published_or_updated": "2026-09",
+      "confidence_ceiling": "low",
+      "independence_group": "reelax",
+      "notes": "Hashtag and performance data indicate Bihari-food and seasonal-food content but do not establish venue accuracy."
+    }
+  ]
+}
