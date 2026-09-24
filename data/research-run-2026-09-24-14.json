@@ -1,0 +1,77 @@
+{
+  "run_id": "2026-09-24-14",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "repeated coverage of established corridors and event reporting",
+    "new_metrics": [
+      "operational_state_conflict_rate",
+      "corridor_evidence_independence",
+      "planned_vs_operational_food_infrastructure",
+      "event_food_intensity",
+      "source_quality_penalty_for_unsupported_editorial_superlatives"
+    ],
+    "query_rotation": [
+      "Patna food hub traditional street food municipal 2026",
+      "Patna street food corridor operational status 2026",
+      "Patna food current listings emerging vendors 2026",
+      "Bihar traditional food event Patna September 2026",
+      "Patna food discovery street food creator app India 2026"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f14-01",
+      "type": "food_infrastructure",
+      "claim": "PMC has proposed dedicated food hubs at JP Ganga Path near Digha Golambar, Khatal Gali in Kotwali and the common service centre premises in Mithapur.",
+      "status": "reported_plan",
+      "confidence": "medium",
+      "source_ids": ["s14-01"],
+      "product_implication": "Food hubs need lifecycle states: proposed, approved, construction, operational, changed, closed."
+    },
+    {
+      "id": "f14-02",
+      "type": "corridor_transition",
+      "claim": "The Digha Ganga Path vending concept changed from an earlier small-stall model toward a proposal for about 85 branded food cafes near Digha roundabout.",
+      "status": "reported_plan",
+      "confidence": "medium",
+      "source_ids": ["s14-02"],
+      "product_implication": "Do not merge multiple plans into one permanent corridor record; preserve plan versions and dates."
+    },
+    {
+      "id": "f14-03",
+      "type": "event",
+      "claim": "Bihar Saras Mela 2026 at Gyan Bhawan runs September 20-29 with 135+ stalls and traditional foods; reporting on September 23 put first-three-day business above Rs 68.56 lakh.",
+      "status": "dated_reported_observation",
+      "confidence": "medium_high",
+      "source_ids": ["s14-03","s14-04"],
+      "product_implication": "Event pages should expose dated food activity and commercial observations separately from static event metadata."
+    },
+    {
+      "id": "f14-04",
+      "type": "source_quality",
+      "claim": "A current Exhibition Road guide uses strong superlatives such as 'densest' and 'purest food experience' without transparent methodology.",
+      "status": "editorial_signal",
+      "confidence": "low",
+      "source_ids": ["s14-05"],
+      "product_implication": "Editorial superlatives should not increase corridor confidence unless independently corroborated."
+    },
+    {
+      "id": "f14-05",
+      "type": "product_pattern",
+      "claim": "Streatzo positions street-food discovery around maps, vendors, pop-ups, home chefs, creator stories and engagement rather than delivery.",
+      "status": "market_pattern",
+      "confidence": "medium",
+      "source_ids": ["s14-06"],
+      "product_implication": "Crave Hunt can differentiate through source-backed local history, evidence timelines and research transparency rather than competing on generic map coverage."
+    }
+  ],
+  "dedupe_actions": [
+    "No new canonical entity was created for existing Saras Mela or Digha corridor records; new material is stored as observations/plans.",
+    "Pappu Chaiwalla and Street Foods by Punjab Grill remain existing research leads rather than duplicate venue entities."
+  ],
+  "contradictions": [
+    "Digha food infrastructure has multiple reported design phases; these are retained as dated plans rather than collapsed into one current fact."
+  ],
+  "next_build": "Implement plan_version and lifecycle_observation support in corridor and vending_zone records, then surface a dated evidence timeline on locality pages."
+}
