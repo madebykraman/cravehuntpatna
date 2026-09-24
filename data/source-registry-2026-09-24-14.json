@@ -1,0 +1,71 @@
+{
+  "run_id": "2026-09-24-14",
+  "sources": [
+    {
+      "id": "s14-01",
+      "type": "news",
+      "title": "Patna Municipal Corporation Plans New Food Hub to Promote Bihar’s Traditional Street Food",
+      "url": "https://patnapress.com/patna-food-hub-bihar-street-food-project/",
+      "published_at": "2026-05-15",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s14-02",
+      "type": "news",
+      "title": "Big Change On Patna’s Ganga Driveway: 85 Branded Food Cafes To Open at Digha Roundabout",
+      "url": "https://patnapress.com/patna-ganga-path-food-cafes-vending-zone-revamp/",
+      "published_at": "2026-03-18",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s14-03",
+      "type": "news",
+      "title": "Saras Mela featuring rural products, traditional food items to open at Gyan Bhawan today",
+      "url": "https://timesofindia.indiatimes.com/city/patna/saras-mela-featuring-rural-products-traditional-food-items-to-open-at-gyan-bhawan-today/amp_articleshow/134354530.cms",
+      "published_at": "2026-09-19",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium_high",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s14-04",
+      "type": "news",
+      "title": "Bihar Saras Mela In Patna: Rs 68.56 Lakh Business In Three Days",
+      "url": "https://patnapress.com/bihar-saras-mela-patna-rs-68-56-lakh-business-rural-women/",
+      "published_at": "2026-09-23",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s14-05",
+      "type": "article",
+      "title": "exhibition road patna food guide (2026)",
+      "url": "https://travell.cc/bihar/exhibition-road-food-guide/",
+      "published_at": "2026-02-28",
+      "accessed_at": "2026-09-24",
+      "confidence": "low",
+      "freshness": "recent",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s14-06",
+      "type": "article",
+      "title": "Streatzo - India's Street Food Finder App",
+      "url": "https://www.streatzoindia.com/",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    }
+  ]
+}
