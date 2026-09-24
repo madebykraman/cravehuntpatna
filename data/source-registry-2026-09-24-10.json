@@ -1,0 +1,57 @@
+{
+  "run_id": "2026-09-24-10",
+  "sources": [
+    {
+      "id": "m-chaat-guru-exhibition-road-2026",
+      "type": "map",
+      "title": "Chaat Guru, Exhibition Road, Patna",
+      "url": "https://magicpin.in/Patna/Exhibition-Road/Restaurant/Chaat-Guru/store/445a4c",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "c-rajesh-rawani-socialveins-2026",
+      "type": "creator_index",
+      "title": "Rajesh Rawani (@r_rajesh_07) creator index",
+      "url": "https://socialveins.com/influencer/instagram/r_rajesh_07",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "n-saras-mela-2026-09-19",
+      "type": "news",
+      "title": "Saras Mela featuring rural products, traditional food items to open at Gyan Bhawan today",
+      "url": "https://timesofindia.indiatimes.com/city/patna/saras-mela-featuring-rural-products-traditional-food-items-to-open-at-gyan-bhawan-today/amp_articleshow/134354530.cms",
+      "published_at": "2026-09-19",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "n-saras-mela-2026-09-20",
+      "type": "news",
+      "title": "Bihar Saras Mela 2026 opens in Patna",
+      "url": "https://patnapress.com/bihar-saras-mela-2026-opens-in-patna-women-entrepreneurs-from-15-states-bring-handicrafts-handlooms-and-local-flavours/",
+      "published_at": "2026-09-20",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "p-eatables-2026-09-24",
+      "type": "article",
+      "title": "Eatables food discovery app",
+      "url": "https://www.eatables.app/",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary"
+    }
+  ]
+}
