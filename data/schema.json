@@ -5,20 +5,23 @@
     "provenance": "every publishable claim must point to one or more source ids",
     "sentiment": "community sentiment must not be promoted to objective fact without corroboration",
     "entity_status": "unknown or weakly sourced entities stay in research state until independently corroborated",
-    "geography": "pincode, locality and food-corridor relationships require explicit evidence; do not infer a corridor from one business"
+    "geography": "pincode, locality and food-corridor relationships require explicit evidence; do not infer a corridor from one business",
+    "contradictions": "conflicting claims are preserved as unresolved evidence rather than silently collapsed",
+    "pincodes": "a locality may map to multiple pincodes; retain sub-area postal evidence instead of forcing one canonical pincode"
   },
   "place": {
     "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
-    "area":"string","pincode":"string","address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
+    "area":"string","pincodes":["string"],"address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
     "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated|research",
-    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"],"claim_status":"verified|corroborated|community_signal|unverified"
+    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"],"claim_status":"verified|corroborated|community_signal|unverified",
+    "contradictions":["claim_id"]
   },
   "dish": {
     "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
     "heritage_note":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown"
   },
   "source": {
-    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news",
+    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal",
     "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
     "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown",
     "source_role":"primary|secondary|community_signal|discovery_lead"
@@ -32,6 +35,11 @@
     "status":"new|researching|verified|published|rejected","notes":"string"
   },
   "locality": {
-    "id":"string","name":"string","pincode":"string","food_role":"string","food_signals":["string"],"evidence":["source_id"]
+    "id":"string","name":"string","pincodes":["string"],"food_role":"string","food_signals":["string"],"evidence":["source_id"],
+    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","contradictions":["claim_id"]
+  },
+  "claim": {
+    "id":"string","entity_id":"string","field":"string","statement":"string","source_ids":["source_id"],
+    "status":"verified|corroborated|community_signal|unverified|contradicted","confidence":"high|medium|low","last_checked":"YYYY-MM-DD"
   }
 }
