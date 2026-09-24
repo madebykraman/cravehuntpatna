@@ -1,0 +1,113 @@
+{
+  "run_id": "2026-09-24-17",
+  "sources": [
+    {
+      "id": "s17-01",
+      "type": "official_tourism",
+      "title": "Thekua",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/sweet/thekua",
+      "role": "canonical_dish_context",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-02",
+      "type": "official_tourism",
+      "title": "Khichdi",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/main-course/khichdi",
+      "role": "canonical_dish_context",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-03",
+      "type": "news",
+      "title": "Saras Mela featuring rural products, traditional food items to open at Gyan Bhawan today",
+      "url": "https://timesofindia.indiatimes.com/city/patna/saras-mela-featuring-rural-products-traditional-food-items-to-open-at-gyan-bhawan-today/amp_articleshow/134354530.cms",
+      "role": "event_schedule_and_food_participation",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-04",
+      "type": "news",
+      "title": "Bihar Saras Mela In Patna: Rs 68.56 Lakh Business In Three Days",
+      "url": "https://patnapress.com/bihar-saras-mela-patna-rs-68-56-lakh-business-rural-women/",
+      "role": "dated_event_observation",
+      "confidence": "medium_high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-05",
+      "type": "community",
+      "title": "Litti hunt",
+      "url": "https://www.reddit.com/r/Patna/comments/1s46id3/litti_hunt/",
+      "role": "micro_location_discovery_signal",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-06",
+      "type": "creator_index",
+      "title": "Top 10 Patna Based Bloggers",
+      "url": "https://findinfluencer.in/top-10-patna-based-bloggers",
+      "role": "creator_discovery",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-07",
+      "type": "creator_index",
+      "title": "Instagram creator @urgeforfood",
+      "url": "https://getreelax.com/instagram/urgeforfood",
+      "role": "creator_metric_observation",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-08",
+      "type": "creator_index",
+      "title": "Instagram creator @happiness_on_my_plate",
+      "url": "https://getreelax.com/instagram/happiness_on_my_plate/",
+      "role": "creator_metric_observation",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-09",
+      "type": "product_research",
+      "title": "Waybites",
+      "url": "https://www.waybites.com/",
+      "role": "creator_video_to_map_pattern",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-10",
+      "type": "product_research",
+      "title": "TasteMap",
+      "url": "https://tastemap.my/",
+      "role": "saved_reel_to_personal_map_pattern",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-11",
+      "type": "product_research",
+      "title": "BiteVault",
+      "url": "https://apkpure.net/bitevault-recipes-food-map/app.bitevault.android",
+      "role": "food_map_and_visit_state_pattern",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s17-12",
+      "type": "product_research",
+      "title": "rec'd",
+      "url": "https://support.recd.co/getting-started/6XZXq38BpQdjopHJ1MEL4o/what-is-recd/7pvPEd4SJS4HJuLpnYddXQ",
+      "role": "social_save_state_and_creator_following_pattern",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    }
+  ]
+}
