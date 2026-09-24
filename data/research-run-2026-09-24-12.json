@@ -1,0 +1,80 @@
+{
+  "run_id": "2026-09-24-12",
+  "date": "2026-09-24",
+  "strategy": {
+    "primary_gap": "entity-state aging and discovery-lead conversion",
+    "coverage": ["operating_state", "micro_places", "food_culture", "community_signals", "events", "product_patterns", "postal_geography"],
+    "metrics": {
+      "new_entity_threshold": "prefer records not already present in the corpus",
+      "corroboration_threshold": "do not publish a third-party place as editorial fact without an independent source",
+      "state_staleness": "flag operating-status claims older than 30 days when no current source exists",
+      "community_signal_rule": "community reports remain signals unless independently corroborated",
+      "event_rule": "event performance figures are dated observations, never permanent attributes"
+    }
+  },
+  "findings": [
+    {
+      "id": "f12-01",
+      "topic": "current_event",
+      "entity": "Bihar Saras Mela 2026",
+      "finding": "Current reporting says the Gyan Bhawan event runs Sep 20-29, 2026, with 135+ stalls from 15 states and reported business above Rs 68.56 lakh in its first three days.",
+      "classification": "reported_observation",
+      "confidence": "high",
+      "source_ids": ["src12-saras-toi", "src12-saras-press"],
+      "observed_at": "2026-09-23"
+    },
+    {
+      "id": "f12-02",
+      "topic": "place_state",
+      "entity": "Chaat Guru, Exhibition Road",
+      "finding": "Magicpin currently labels the outlet as shut down while retaining historical menu/review material.",
+      "classification": "operating_state_signal",
+      "confidence": "medium",
+      "source_ids": ["src12-chaatguru"],
+      "observed_at": "2026-09-24"
+    },
+    {
+      "id": "f12-03",
+      "topic": "community_signal",
+      "entity": "Freshbox",
+      "finding": "A Patna Reddit discussion from Mar 31, 2026 describes Freshbox as a closed cloud kitchen and records repeated positive nostalgia for its food.",
+      "classification": "community_signal",
+      "confidence": "medium",
+      "source_ids": ["src12-reddit-freshbox"],
+      "observed_at": "2026-03-31"
+    },
+    {
+      "id": "f12-04",
+      "topic": "food_culture",
+      "entity": "Bihar cuisine",
+      "finding": "Bihar Foundation's cuisine archive explicitly documents Khoye-ki-Laai from Barh in Patna district and Chandrakala among traditional Bihar foods, supporting a district-level culinary geography layer.",
+      "classification": "institutional_culture_source",
+      "confidence": "high",
+      "source_ids": ["src12-bihar-foundation"],
+      "observed_at": "2026-09-24"
+    },
+    {
+      "id": "f12-05",
+      "topic": "product_pattern",
+      "entity": "Crvyn",
+      "finding": "Current food-discovery product positioning is moving toward craving-language, taste attributes, dish-level matching, photo input and personalization rather than restaurant directory browsing.",
+      "classification": "product_pattern",
+      "confidence": "medium",
+      "source_ids": ["src12-crvyn"],
+      "observed_at": "2026-09-24"
+    }
+  ],
+  "contradictions": [
+    {
+      "entity": "Bihar Saras Mela 2026",
+      "issue": "sales and attendance figures vary by reporting window",
+      "resolution": "retain dated observations; do not collapse to a single event total"
+    },
+    {
+      "entity": "Chaat Guru, Exhibition Road",
+      "issue": "listing retains an 'Open now' label while also saying 'outlet has shutdown'",
+      "resolution": "treat shutdown wording as a contradiction requiring current verification"
+    }
+  ],
+  "next_build": "research/recheck queue plus entity-state timeline"
+}
