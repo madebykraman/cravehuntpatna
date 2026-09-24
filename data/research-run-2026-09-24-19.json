@@ -1,0 +1,97 @@
+{
+  "run_id": "2026-09-24-19",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "Run 18 established evidence chains, branch-aware identity and food-tour concepts. This run targets entity-state conflict detection, creator-signal reliability, and district-to-city culinary provenance without repeating prior event or infrastructure coverage.",
+    "new_metrics": [
+      "listing_state_conflict_rate",
+      "branch_identity_resolution_need",
+      "creator_signal_reliability",
+      "district_origin_to_patna_availability_separation",
+      "primary_vs_secondary_source_ratio",
+      "new_entity_lead_rate"
+    ],
+    "query_rotation": [
+      "Patna outlet shutdown open now contradictory listing Litti 2026",
+      "Patna One Mall litti outlet 2026",
+      "Patna food creator Instagram Patna Paradise Bihar food 2026",
+      "Barh lai Patna district culinary heritage Bihar official",
+      "Patna Exhibition Road street food 2026 source methodology",
+      "Bihar cuisine official 18 delicacies Patna availability"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f19-01",
+      "type": "entity_state_conflict",
+      "claim": "Magicpin's Litti Hut listing in Keshari Nagar simultaneously contains the statement that the outlet has shut down and an 'Open now' state, while retaining address, hours and menu data.",
+      "status": "unresolved_operational_contradiction",
+      "confidence": "high",
+      "source_ids": ["s19-01"],
+      "product_implication": "Crave Hunt should never treat a single aggregator's open/closed flag as authoritative. Conflicting state fields should automatically lower current-status confidence and enter the recheck queue."
+    },
+    {
+      "id": "f19-02",
+      "type": "new_place_lead",
+      "claim": "D.K Litti is listed at Patna One Mall, Hariniwas/Dak Bunglow, with a verified listing, menu prices and operating hours in a July 2026 Magicpin record.",
+      "status": "research_lead",
+      "confidence": "medium",
+      "source_ids": ["s19-02"],
+      "product_implication": "Dish-first discovery can identify micro-specialist outlets, but canonical promotion should require an independent source or direct current verification."
+    },
+    {
+      "id": "f19-03",
+      "type": "creator_signal",
+      "claim": "Patna's Paradise (@patna_paradise_) is currently listed by third-party creator databases as a Patna-based food creator with roughly 21K followers; the profile's own indexed content signals include Bihari-food and seasonal food hashtags.",
+      "status": "creator_research_lead",
+      "confidence": "medium",
+      "source_ids": ["s19-03","s19-04"],
+      "product_implication": "Creator records should store dated audience observations and content-topic evidence separately. Third-party follower counts must not become authority scores."
+    },
+    {
+      "id": "f19-04",
+      "type": "regional_culinary_provenance",
+      "claim": "Bihar Foundation explicitly identifies Khoye-Ki-Laai with Barh in Patna district; this strengthens district-level provenance but does not establish that a specific Patna city vendor currently sells it.",
+      "status": "canonical_context_confirmation",
+      "confidence": "high",
+      "source_ids": ["s19-05"],
+      "product_implication": "Dish entities need separate fields for origin_place, origin_district, cultural_context and current_patna_availability."
+    },
+    {
+      "id": "f19-05",
+      "type": "government_culinary_taxonomy",
+      "claim": "The Bihar government has previously published an official set of 18 delicacies for showcasing Bihar cuisine, including regional sweets and savouries such as Khoye-Ki-Laai, Chandrakala, Parwal-ki-Mithai, Bhuja, Dahi-Chooda and Khichdi.",
+      "status": "canonical_reference",
+      "confidence": "high",
+      "source_ids": ["s19-06"],
+      "product_implication": "Crave Hunt can use official culinary taxonomies as a controlled vocabulary layer while preserving regional provenance instead of treating every listed dish as a Patna venue discovery."
+    }
+  ],
+  "dedupe_actions": [
+    "Khoye-Ki-Laai was not added as a duplicate dish; only its Barh/Patna-district provenance was strengthened.",
+    "Patna's Paradise was treated as a creator lead, not a duplicate of previously researched creator records without identity verification.",
+    "D.K Litti was treated as a new outlet lead, separate from other generic litti entities.",
+    "Litti Hut was treated as an operational-state conflict on a place record rather than a new venue merely because its aggregator listing is inconsistent."
+  ],
+  "contradictions": [
+    {
+      "entity": "Litti Hut, Keshari Nagar",
+      "issue": "The same third-party listing reports both shutdown and open-now states.",
+      "resolution": "Preserve both fields as conflicting observations and require an independent current check before assigning active status."
+    },
+    {
+      "entity": "Creator audience metrics",
+      "issue": "Third-party creator databases can report follower/engagement metrics that vary sharply and may be calculated or stale.",
+      "resolution": "Store source, observed_at and metric_type; never convert reach into editorial trust without content and provenance evidence."
+    }
+  ],
+  "implementation": [
+    "Add a listing_state_conflict rule to the recheck queue.",
+    "Add creator metric provenance fields: observed_at, source, metric_type and reliability_class.",
+    "Add origin_place and origin_district fields to dish provenance without conflating them with Patna availability.",
+    "Add controlled-vocabulary support for government or tourism culinary taxonomies.",
+    "Add micro-specialist outlet classification for dish-led research leads."
+  ],
+  "next_build": "Implement conflict-aware current-state resolution and provenance-aware creator metrics, then expose these distinctions in the public evidence timeline."
+}
