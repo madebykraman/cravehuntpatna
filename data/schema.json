@@ -3,29 +3,35 @@
     "confidence": "confidence describes evidence quality, not popularity",
     "freshness": "freshness is tracked separately from confidence",
     "provenance": "every publishable claim must point to one or more source ids",
-    "sentiment": "community sentiment must not be promoted to objective fact without corroboration"
+    "sentiment": "community sentiment must not be promoted to objective fact without corroboration",
+    "entity_status": "unknown or weakly sourced entities stay in research state until independently corroborated",
+    "geography": "pincode, locality and food-corridor relationships require explicit evidence; do not infer a corridor from one business"
   },
   "place": {
-    "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution",
+    "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
     "area":"string","pincode":"string","address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
-    "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated",
-    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"]
+    "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated|research",
+    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"],"claim_status":"verified|corroborated|community_signal|unverified"
   },
   "dish": {
     "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
-    "heritage_note":"string","places":["place_id"],"sources":["source_id"]
+    "heritage_note":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown"
   },
   "source": {
     "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news",
     "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
-    "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown"
+    "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown",
+    "source_role":"primary|secondary|community_signal|discovery_lead"
   },
   "event": {
     "id":"string","name":"string","start":null,"end":null,"venue":"string","description":"string","url":"string",
-    "source_id":"string","status":"upcoming|ongoing|past|unknown"
+    "source_id":"string","status":"upcoming|ongoing|past|unknown","verification":"official|reported|lead"
   },
   "hunt": {
     "id":"string","submitted_at":"YYYY-MM-DD","request":"string","area":null,"source_url":null,
     "status":"new|researching|verified|published|rejected","notes":"string"
+  },
+  "locality": {
+    "id":"string","name":"string","pincode":"string","food_role":"string","food_signals":["string"],"evidence":["source_id"]
   }
 }
