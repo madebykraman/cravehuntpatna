@@ -1,0 +1,19 @@
+{
+  "updated_at":"2026-09-24",
+  "timeline":[
+    {"id":"h-pataliputra","period":"c. 600 BCE onward","title":"Pataliputra becomes a major ancient city","summary":"Patna's documented history reaches back to Pataliputra and the Magadha world; the district history page places the city's historical beginning around the 6th century BCE.","source_ids":["s-patna-history"]},
+    {"id":"h-maurya","period":"4th century BCE","title":"Mauryan capital","summary":"The Patna district history records Chandragupta Maurya making Pataliputra his capital in the 4th century BCE.","source_ids":["s-patna-history"]},
+    {"id":"h-sher-shah","period":"16th century","title":"Patna's revival under Sher Shah Suri","summary":"The district history describes a revival of Patna in the 16th century under Sher Shah Suri.","source_ids":["s-patna-history"]},
+    {"id":"h-mughal-rice","period":"16th–17th centuries","title":"Patna as a trading centre","summary":"Historical accounts cited in the Patna history record describe Patna as a major eastern trading centre and note the reputation of Patna rice in European markets.","source_ids":["s-patna-history"]},
+    {"id":"h-bihari-cuisine","period":"long-running culinary tradition","title":"Bihar cuisine as a seasonal, ingredient-led food culture","summary":"Bihar Tourism describes a cuisine built around rice, seasonal produce, mustard oil, dairy and relatively simple preparations; the official material lists a broader North/East Indian culinary mixture.","source_ids":["s-bihar-cuisine-brochure","s-bihar-cuisine-state"]},
+    {"id":"h-patna-kalam","period":"18th century onward","title":"Patna Kalam and everyday life","summary":"The Patna district describes Patna Kalam as a painting tradition created by Mughal artists in the 18th century, with everyday life among its defining subjects. This is useful cultural context for the archive's visual storytelling, not a food claim.","source_ids":["s-patna-culture"]},
+    {"id":"h-contemporary","period":"2024–2026","title":"A fragmented but active contemporary food map","summary":"Recent community discussions repeatedly surface corridors such as Boring Road, Maurya Lok and Old Museum Road/Khao Gali alongside dish-specific stops. These are community signals and require field verification before being treated as canonical facts.","source_ids":["r-patna-food-2026-09","r-patna-street-2026-06","r-patna-3day-2026-03"]}
+  ],
+  "sources":[
+    {"id":"s-patna-history","type":"official","title":"History — District Patna, Government of Bihar","url":"https://patna.nic.in/history/","accessed_at":"2026-09-24","confidence":"high"},
+    {"id":"s-patna-culture","type":"official","title":"Culture & Heritage — District Patna, Government of Bihar","url":"https://patna.nic.in/culture-heritage/","accessed_at":"2026-09-24","confidence":"high"},
+    {"id":"s-bihar-cuisine-brochure","type":"official","title":"Magnificent Bihar — Bihar Tourism","url":"https://tourism.bihar.gov.in/content/dam/bihar-tourism/e_brochures/magnificient_bihar/magnificent_bihar_english_2017.pdf","accessed_at":"2026-09-24","confidence":"high"},
+    {"id":"s-bihar-cuisine-state","type":"official","title":"Cuisine of Bihar — Government of Bihar","url":"https://betastate.bihar.gov.in/iprdwebsite/Cuisineofbihar","accessed_at":"2026-09-24","confidence":"high"},
+    {"id":"s-indian-food-heritage-bihar","type":"academic-conference","title":"Indian Food Heritage: History, Evolution, Influences and Modern Trends","url":"https://www.nchm.gov.in/sites/default/files/2022-11/Indian_Food_Heritage.pdf","accessed_at":"2026-09-24","confidence":"medium"}
+  ]
+}
