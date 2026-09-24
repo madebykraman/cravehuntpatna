@@ -8,11 +8,13 @@
     {"id":"loc-maurya-lok","name":"Maurya Lok","pincode":"800001","food_role":"legacy_food_corridor","food_signals":["street food"],"evidence":["r-patna-street-2026-04","r-patna-street-2026-06"]},
     {"id":"loc-mandiri-chhajjubag","name":"Mandiri–Chhajjubag","pincode":"800004","food_role":"emerging_vending_zone","food_signals":["organised street food"],"evidence":["n-square-street-2026-02"]},
     {"id":"loc-kankarbagh","name":"Kankarbagh","pincode":"800020","food_role":"neighbourhood_food_zone","food_signals":["local street food"],"evidence":["r-patna-food-2026-09"]},
-    {"id":"loc-khajpura","name":"Khajpura","pincode":"800014","food_role":"neighbourhood_food_zone","food_signals":["chaat"],"evidence":["seed-place-sai-chaat"]},
     {"id":"loc-s-k-puri","name":"S.K. Puri","pincode":"800013","food_role":"established_restaurant_zone","food_signals":["sweets","restaurant dining"],"evidence":["map-harilals-2026-09"]},
-    {"id":"loc-rani-ghat","name":"Rani Ghat / NIT Patna area","pincode":"800006","food_role":"local_food_zone","food_signals":["local dining"],"evidence":["map-food-mahal-2026-09"]},
     {"id":"loc-patna-city","name":"Patna City / old Patna","pincode":"800008","food_role":"heritage_food_context","food_signals":["heritage food research"],"evidence":["bihar-tourism-dutch-building","bihar-tourism-khuda-baksh"]},
-    {"id":"loc-danapur","name":"Danapur","pincode":"801503","food_role":"outer_patna_food_context","food_signals":["local dining"],"evidence":["bihar-tourism-handi-sahib"]}
+    {"id":"loc-danapur","name":"Danapur","pincode":"801503","food_role":"outer_patna_food_context","food_signals":["food-and-heritage context"],"evidence":["bihar-tourism-handi-sahib"]}
+  ],
+  "unverified_geographies": [
+    {"name":"Khajpura","pincode":"800014","reason":"appears in earlier UI seed data, but current research pass did not establish a strong corridor-level food claim"},
+    {"name":"Rani Ghat / NIT Patna area","pincode":"800006","reason":"map discovery exists, but current pass did not establish a meaningful food-corridor signal"}
   ],
   "next_metrics": [
     "coverage_by_pincode",
