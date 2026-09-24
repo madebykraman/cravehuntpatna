@@ -1,0 +1,15 @@
+{
+  "run_id": "2026-09-24-13",
+  "sources": [
+    {"id":"src-13-saras-press-0923","type":"news","title":"Bihar Saras Mela In Patna: Rs 68.56 Lakh Business In Three Days","url":"https://patnapress.com/bihar-saras-mela-patna-rs-68-56-lakh-business-rural-women/","published_at":"2026-09-23","accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","freshness":"current"},
+    {"id":"src-13-chaat-magicpin","type":"map","title":"Chaat Guru, Exhibition Road, Patna","url":"https://magicpin.in/Patna/Exhibition-Road/Restaurant/Chaat-Guru/store/445a4c","published_at":null,"accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","freshness":"current"},
+    {"id":"src-13-urgeforfood","type":"creator_index","title":"Patna food blogger | Shruti | @urgeforfood","url":"https://getreelax.com/instagram/urgeforfood","published_at":null,"accessed_at":"2026-09-24","source_role":"discovery_lead","confidence":"medium","freshness":"current"},
+    {"id":"src-13-happiness","type":"creator_index","title":"Neha From Patna! Food Blogger | @happiness_on_my_plate","url":"https://getreelax.com/instagram/happiness_on_my_plate/","published_at":null,"accessed_at":"2026-09-24","source_role":"discovery_lead","confidence":"medium","freshness":"current"},
+    {"id":"src-13-punjab-grill","type":"map","title":"Street Foods by Punjab Grill, Patliputra Colony, Patna","url":"https://magicpin.in/Patna/Patliputra-Colony/Restaurant/Street-Foods-By-Punjab-Grill/store/548203","published_at":null,"accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","freshness":"current"},
+    {"id":"src-13-pappu","type":"map","title":"Pappu Chaiwalla, Gandhi Maidan, Patna","url":"https://magicpin.in/Patna/Gandhi-Maidan/Restaurant/Pappu-Chaiwalla/store/38a599","published_at":null,"accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","freshness":"current"},
+    {"id":"src-13-waybites","type":"article","title":"Waybites: The Local Food Discovery Map","url":"https://www.waybites.com/","published_at":null,"accessed_at":"2026-09-24","source_role":"primary","confidence":"high","freshness":"current"},
+    {"id":"src-13-bihar-foundation","type":"official","title":"Cuisine of Bihar","url":"https://biharfoundation.in/know-your-bihar/art-culture/cuisines","published_at":null,"accessed_at":"2026-09-24","source_role":"primary","confidence":"high","freshness":"recent"},
+    {"id":"src-13-eatables","type":"article","title":"Eatables food discovery app","url":"https://www.eatables.app/","published_at":null,"accessed_at":"2026-09-24","source_role":"primary","confidence":"high","freshness":"current"},
+    {"id":"src-13-hogr","type":"article","title":"HOGR social dining app","url":"https://www.hogr.app/","published_at":null,"accessed_at":"2026-09-24","source_role":"primary","confidence":"high","freshness":"current"}
+  ]
+}
