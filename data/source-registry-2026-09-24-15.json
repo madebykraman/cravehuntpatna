@@ -1,0 +1,93 @@
+{
+  "run_id": "2026-09-24-15",
+  "sources": [
+    {
+      "id": "s15-01",
+      "type": "official",
+      "title": "RARI Patna Organises Mini Expo on Traditional Foods and Millets to Mark 11th Ayurveda Day",
+      "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2313964&lang=1&reg=3",
+      "published_at": "2026-09-23",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary"
+    },
+    {
+      "id": "s15-02",
+      "type": "news",
+      "title": "RARI Patna organizes mini expo on traditional food and millets on Ayurveda Day",
+      "url": "https://anytvnews.com/health/rari-patna-organizes-mini-expo-on-traditional-food-and-millets-on-ayurveda-day/",
+      "published_at": "2026-09-24",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s15-03",
+      "type": "fact_check",
+      "title": "Viral Video of Man Assaulting Food Vendor by Flipping Tray Is Real or Scripted? Here's the Fact Check",
+      "url": "https://www.latestly.com/india/news/viral-video-of-man-assaulting-food-vendor-by-flipping-tray-is-real-or-scripted-heres-the-fact-check-7616834.html",
+      "published_at": "2026-09-23",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s15-04",
+      "type": "article",
+      "title": "Man Hits Street Vendor, Throws Food on Road Near Patna Junction; Police Respond",
+      "url": "https://jantascope.com/news/man-hits-street-vendor-throws-his-food-on-road-near-patna-junction-police-respond",
+      "published_at": "2026-09-17",
+      "accessed_at": "2026-09-24",
+      "confidence": "low",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s15-05",
+      "type": "article",
+      "title": "Video of Patna vendor's Dosa Printing Machine has Anand Mahindra's attention",
+      "url": "https://www.indiatoday.in/trending-news/story/patna-vendor-dosa-printing-machine-viral-video-has-anand-mahindra-attention-2633268-2024-11-14",
+      "published_at": "2024-11-14",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "historical",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s15-06",
+      "type": "article",
+      "title": "TiffinPatna — Home-Cooked Meals, Catering & Mess Services in Patna",
+      "url": "https://tiffinpatna.com/",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s15-07",
+      "type": "official",
+      "title": "Tilkut",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/sweet/tilkut",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary"
+    },
+    {
+      "id": "s15-08",
+      "type": "official",
+      "title": "Balushahi",
+      "url": "https://tourism.bihar.gov.in/en/experiences/food-and-cuisine/sweet/balushahi",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "current",
+      "source_role": "primary"
+    }
+  ]
+}
