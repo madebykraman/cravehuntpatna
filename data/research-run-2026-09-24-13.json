@@ -1,0 +1,82 @@
+{
+  "run_id": "2026-09-24-13",
+  "date": "2026-09-24",
+  "strategy": {
+    "primary_shift": "freshness_and_operational_state",
+    "coverage": ["current_events", "operating_places", "creator_signals", "Bihar_cuisine", "food_discovery_products"],
+    "new_metric": "evidence_delta: prefer claims whose state, date, source role, or entity relationship differs from prior corpus",
+    "anti_repetition": "reused Saras Mela only for a new dated observation and avoided treating earlier totals as new facts"
+  },
+  "findings": [
+    {
+      "id": "finding-13-01",
+      "type": "event_observation",
+      "entity": "bihar-saras-mela-2026",
+      "claim": "JEEViKA reported more than Rs 68.56 lakh cumulative business during the first three days; the third day alone exceeded Rs 25.37 lakh.",
+      "observed_at": "2026-09-23",
+      "confidence": "medium",
+      "status": "reported"
+    },
+    {
+      "id": "finding-13-02",
+      "type": "place_state_contradiction",
+      "entity": "chaat-guru-exhibition-road",
+      "claim": "The current third-party listing contains both a shutdown notice and an Open now label.",
+      "observed_at": "2026-09-24",
+      "confidence": "medium",
+      "status": "contradicted"
+    },
+    {
+      "id": "finding-13-03",
+      "type": "creator_lead",
+      "entity": "urgeforfood",
+      "claim": "A public creator index identifies @urgeforfood as a Patna food blogger with current audience and engagement estimates; treat metrics as third-party observations, not platform verified facts.",
+      "observed_at": "2026-09-24",
+      "confidence": "medium",
+      "status": "community_signal"
+    },
+    {
+      "id": "finding-13-04",
+      "type": "creator_lead",
+      "entity": "happiness-on-my-plate",
+      "claim": "A public creator index identifies @happiness_on_my_plate as a Patna food blogger and surfaces Bihar food related content; third-party follower and engagement metrics remain observational.",
+      "observed_at": "2026-09-24",
+      "confidence": "medium",
+      "status": "community_signal"
+    },
+    {
+      "id": "finding-13-05",
+      "type": "place_lead",
+      "entity": "street-foods-by-punjab-grill-patliputra-colony",
+      "claim": "A current third-party listing records a food-court outlet at PNM Mall, Patliputra Industrial Area, with street food and North Indian categories.",
+      "observed_at": "2026-09-24",
+      "confidence": "medium",
+      "status": "observed"
+    },
+    {
+      "id": "finding-13-06",
+      "type": "place_lead",
+      "entity": "pappu-chaiwalla-gandhi-maidan",
+      "claim": "A current third-party listing records Pappu Chaiwalla in Gandhi Maidan with street food, momos and sandwich categories.",
+      "observed_at": "2026-09-24",
+      "confidence": "medium",
+      "status": "observed"
+    },
+    {
+      "id": "finding-13-07",
+      "type": "product_pattern",
+      "entity": "waybites",
+      "claim": "Waybites maps food spots extracted from creator videos, reinforcing a product pattern of converting short-form food media into searchable geographic entities.",
+      "observed_at": "2026-09-24",
+      "confidence": "high",
+      "status": "verified"
+    }
+  ],
+  "implementation_updates": [
+    "Treat third-party place operating labels as observations and expose conflicting state instead of selecting one label silently.",
+    "Add creator_metric_observation as a temporal observation class; do not store follower counts as immutable creator facts.",
+    "Add creator_video_place_link as a first-class relationship candidate for future media ingestion.",
+    "Keep event commercial metrics dated and reported rather than attached permanently to the event entity.",
+    "Prioritize evidence timeline UI before adding more generic venue cards."
+  ]
+}
