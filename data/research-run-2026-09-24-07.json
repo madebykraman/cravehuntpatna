@@ -1,0 +1,34 @@
+{
+  "run":"2026-09-24-07",
+  "strategy":"Taxonomy-first research: reduce duplication in dish records by identifying an authoritative Bihar-wide culinary reference set, then attach geographic context and Patna relevance without implying local availability. Secondary pass checked current event and product-discovery signals.",
+  "new_sources":[
+    {"id":"src-bihar-18-delicacies-ie-2026","type":"news","title":"Beyond litti-chokha: Bihar govt releases official list of 18 delicacies to showcase its cuisine","url":"https://indianexpress.com/article/cities/patna/litti-chokha-bihar-govt-official-list-18-delicacies-showcase-cuisine-10536491/","published_at":"2026-02-17","accessed_at":"2026-09-24","source_role":"secondary","confidence":"high","claims":["Bihar government published a showcase list of 18 delicacies","list spans savory dishes, snacks, sweets and Bihari thali","several items have explicit geographic associations such as Maner laddoo, khaja, tilkut and khoye-ki-lai"]},
+    {"id":"src-bihar-cuisine-niti-2026","type":"official","title":"NITI Aayog — Divya Bharat: A Window to the Soul of India, Bihar chapter","url":"https://www.niti.gov.in/node/2250","published_at":"2026-04-17","accessed_at":"2026-09-24","source_role":"primary","confidence":"high","claims":["NITI Aayog Bihar chapter identifies litti chokha, sattu paratha, khaja, thekua, malpua and dal pitha as Bihar cuisines","document places Patna inside multiple Bihar tourism circuits"]},
+    {"id":"event-saras-press-2026-09-22","type":"news","title":"Bihar Saras Mela Draws 24,000 Visitors in a Day, Sales Cross Rs 51 Lakh in Just Two Days","url":"https://patnapress.com/bihar-saras-mela-patna-sales-51-lakh-24000-visitors-buyer-seller-meet/","published_at":"2026-09-22","accessed_at":"2026-09-24","source_role":"secondary","confidence":"medium","claims":["reported 24,000 visitors on the second day","reported approximately Rs 51 lakh sales across two days","event includes traditional foods and rural products"]},
+    {"id":"prod-hogr-2026","type":"article","title":"HOGR — social food discovery product","url":"https://www.hogr.app/","accessed_at":"2026-09-24","source_role":"discovery_lead","confidence":"high","claims":["product combines social recommendations, food discovery, creator/influencer signals, video content and rewards"]}
+  ],
+  "dedupe_actions":[
+    "Created one canonical Bihar cuisine taxonomy rather than adding 18 disconnected dish records.",
+    "Kept geographic origin/context as attributes of the canonical dish, while reserving Patna availability for separately evidenced place records.",
+    "Kept Saras Mela as the existing event entity and added the newer reported attendance/sales observation as temporal evidence rather than a duplicate event.",
+    "Kept HOGR as product research rather than treating its features as evidence about Patna food."
+  ],
+  "contradictions_or_limits":[
+    "The Indian Express source reports an official Bihar government list but is still secondary reporting; the NITI Aayog anthology independently corroborates several Bihar cuisine items but is not the same list.",
+    "A Bihar-wide canonical dish does not establish that a Patna venue serves the dish. Local availability requires place-level evidence.",
+    "Saras Mela attendance and sales figures are reported figures and should remain attributed, not treated as audited counts."
+  ],
+  "product_learnings":[
+    "Crave Hunt needs a canonical dish layer before place discovery can scale without alias duplication.",
+    "Dish pages should distinguish culinary identity, geographic origin/context, and current Patna availability as three separate evidence states.",
+    "A strong discovery product can borrow HOGR's social/video discovery pattern while differentiating through provenance, locality intelligence and historical context rather than generic ratings."
+  ],
+  "next_metrics":[
+    "canonical_dish_alias_count",
+    "dish_to_patna_place_evidence_ratio",
+    "dish_origin_vs_patna_availability_conflict_count",
+    "independent_source_count_per_dish",
+    "food_event_temporal_observation_count",
+    "locality_to_canonical_dish_link_density"
+  ]
+}
