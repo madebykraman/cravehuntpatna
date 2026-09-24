@@ -11,6 +11,7 @@
     "taxonomy": "canonical dishes and culinary identities are separate from current venue availability",
     "temporal_evidence": "changing facts such as price, opening status, creator metrics, event performance and corridor status are stored as dated observations rather than overwriting history",
     "media_relationships": "creator content is evidence or discovery context until its referenced place or dish is independently resolved",
+    "media_integrity": "viral or creator media must carry an authenticity/context state; fact-checked or scripted content must not become factual place evidence",
     "infrastructure_lifecycle": "planned or changing food infrastructure must preserve dated plan versions and must not be represented as operational until supported by current evidence",
     "editorial_weight": "unsupported superlatives or ranking language from editorial guides are discovery signals, not confidence upgrades"
   },
@@ -26,7 +27,7 @@
     "heritage_note":"string","geographic_context":"string","patna_relevance":"string","places":["place_id"],"sources":["source_id"],"confidence":"high|medium|low","freshness":"current|recent|historical|unknown","observations":["observation_id"],"media_links":["media_link_id"]
   },
   "source": {
-    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal|event_listing",
+    "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal|event_listing|fact_check",
     "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
     "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown",
     "source_role":"primary|secondary|community_signal|discovery_lead","methodology":"string|null"
@@ -61,6 +62,7 @@
   "media_link": {
     "id":"string","creator_id":"creator_id","source_id":"source_id","entity_ids":["place_id|dish_id|locality_id"],
     "relationship":"featured_place|featured_dish|mentions_locality|discovery_lead","resolved":"resolved|partial|unresolved",
+    "authenticity":"unverified|authenticity_unchecked|verified|fact_checked_false_context|scripted|historical_reenactment|promotional",
     "confidence":"high|medium|low","observed_at":"YYYY-MM-DD","notes":"string"
   }
 }
