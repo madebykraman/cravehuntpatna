@@ -1,0 +1,82 @@
+{
+  "run_id": "2026-09-24-16",
+  "sources": [
+    {
+      "id": "s16-01",
+      "type": "youtube",
+      "title": "PATNA Ramzan IFTAR Food Walk in Sabzi Bagh | BAKARKHANI + Sheer Chai + Bihari Kabab + Makuti/Pakiza",
+      "url": "https://www.youtube.com/watch?v=znClhVQkqVQ",
+      "published_at": "2026-03-07",
+      "accessed_at": "2026-09-24",
+      "confidence": "high",
+      "freshness": "historical",
+      "source_role": "secondary"
+    },
+    {
+      "id": "s16-02",
+      "type": "reddit",
+      "title": "Litti hunt",
+      "url": "https://www.reddit.com/r/Patna/comments/1s46id3/litti_hunt/",
+      "published_at": "2026-03-26",
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "recent",
+      "source_role": "community_signal"
+    },
+    {
+      "id": "s16-03",
+      "type": "creator_index",
+      "title": "Instagram creator @urgeforfood | Reelax",
+      "url": "https://getreelax.com/instagram/urgeforfood",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s16-04",
+      "type": "creator_index",
+      "title": "Patna's Paradise | Socialveins",
+      "url": "https://socialveins.com/influencer/instagram/patna_paradise_",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s16-05",
+      "type": "creator_index",
+      "title": "Rupali Singh | Socialveins",
+      "url": "https://socialveins.com/influencer/instagram/bihari_maai",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s16-06",
+      "type": "creator_index",
+      "title": "Amitesh | Food Blogger | Social Blade",
+      "url": "https://socialblade.com/instagram/user/foodie_robin_",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    },
+    {
+      "id": "s16-07",
+      "type": "article",
+      "title": "Mapiefood — Personal Food Map for India",
+      "url": "https://www.mapiefood.com/",
+      "published_at": null,
+      "accessed_at": "2026-09-24",
+      "confidence": "medium",
+      "freshness": "current",
+      "source_role": "discovery_lead"
+    }
+  ]
+}
