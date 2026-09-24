@@ -10,14 +10,16 @@
     "pincodes": "a locality may map to multiple pincodes; retain sub-area postal evidence instead of forcing one canonical pincode",
     "taxonomy": "canonical dishes and culinary identities are separate from current venue availability",
     "temporal_evidence": "changing facts such as price, opening status, creator metrics, event performance and corridor status are stored as dated observations rather than overwriting history",
-    "media_relationships": "creator content is evidence or discovery context until its referenced place or dish is independently resolved"
+    "media_relationships": "creator content is evidence or discovery context until its referenced place or dish is independently resolved",
+    "infrastructure_lifecycle": "planned or changing food infrastructure must preserve dated plan versions and must not be represented as operational until supported by current evidence",
+    "editorial_weight": "unsupported superlatives or ranking language from editorial guides are discovery signals, not confidence upgrades"
   },
   "place": {
     "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
     "area":"string","pincodes":["string"],"address":"string","lat":null,"lng":null,"dishes":["dish_id"],"heritage_tags":["string"],
     "price_band":"₹|₹₹|₹₹₹|unknown","opening_hours":null,"status":"active|uncertain|closed|relocated|research",
     "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","sources":["source_id"],"claim_status":"verified|corroborated|community_signal|unverified",
-    "contradictions":["claim_id"],"observations":["observation_id"],"media_links":["media_link_id"]
+    "contradictions":["claim_id"],"observations":["observation_id"],"media_links":["media_link_id"],"plan_versions":["plan_version_id"]
   },
   "dish": {
     "id":"string","name":"string","aliases":["string"],"region":"string","type":"street|sweet|drink|main|snack|dessert|ingredient",
@@ -27,7 +29,7 @@
     "id":"string","type":"official|article|reddit|x|youtube|instagram|map|community|archive|creator_index|news|postal|event_listing",
     "title":"string","url":"string","published_at":null,"accessed_at":"YYYY-MM-DD","creator":null,
     "claims":["string"],"confidence":"high|medium|low","freshness":"current|recent|aging|historical|unknown",
-    "source_role":"primary|secondary|community_signal|discovery_lead"
+    "source_role":"primary|secondary|community_signal|discovery_lead","methodology":"string|null"
   },
   "event": {
     "id":"string","name":"string","start":null,"end":null,"venue":"string","description":"string","url":"string",
@@ -39,7 +41,7 @@
   },
   "locality": {
     "id":"string","name":"string","pincodes":["string"],"food_role":"string","food_signals":["string"],"evidence":["source_id"],
-    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","contradictions":["claim_id"],"observations":["observation_id"]
+    "confidence":"high|medium|low","last_verified":"YYYY-MM-DD","contradictions":["claim_id"],"observations":["observation_id"],"plan_versions":["plan_version_id"]
   },
   "claim": {
     "id":"string","entity_id":"string","field":"string","statement":"string","source_ids":["source_id"],
@@ -48,6 +50,9 @@
   "observation": {
     "id":"string","entity_id":"string","field":"string","value":null,"observed_at":"YYYY-MM-DD","source_ids":["source_id"],
     "status":"observed|reported|verified|community_signal","confidence":"high|medium|low","supersedes":null,"notes":"string"
+  },
+  "plan_version": {
+    "id":"string","entity_id":"string","announced_at":"YYYY-MM-DD","state":"proposed|approved|construction|operational|redesigned|delayed|cancelled|unknown","description":"string","source_ids":["source_id"],"confidence":"high|medium|low","supersedes":null,"observations":["observation_id"]
   },
   "creator": {
     "id":"string","name":"string","handles":["string"],"home_area":"string","platforms":["instagram|youtube|x"],
