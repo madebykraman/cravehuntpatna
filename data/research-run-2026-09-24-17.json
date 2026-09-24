@@ -1,0 +1,84 @@
+{
+  "run_id": "2026-09-24-17",
+  "run_type": "fresh_web_research_and_product_audit",
+  "executed_at": "2026-09-24",
+  "strategy_change": {
+    "previous_gap": "seasonal corridors and creator locality resolution were modeled, but the corpus still underrepresented canonical culinary context, event-to-dish relationships, and independence between source types",
+    "new_metrics": [
+      "primary_source_coverage",
+      "event_to_dish_resolution",
+      "dish_to_occasion_resolution",
+      "source_independence_score",
+      "creator_discovery_vs_editorial_resolution",
+      "market_pattern_recency"
+    ],
+    "query_rotation": [
+      "site:tourism.bihar.gov.in Patna Bihar food cuisine thekua khichdi",
+      "Patna Saras Mela 2026 traditional food stalls September",
+      "Patna food creator Foodie Robin 2026",
+      "Patna litti Mahavir Mandir GPO Golambar Reddit 2026",
+      "India food discovery map creator videos saved places 2026",
+      "food map app India social recommendations taste profile 2026"
+    ]
+  },
+  "findings": [
+    {
+      "id": "f17-01",
+      "type": "canonical_culinary_context",
+      "claim": "Bihar Tourism's current official cuisine pages document Thekua as a traditional Bihar sweet associated with Chhath Puja and Khichdi as a common Bihar food with Makar Sankranti and festive associations.",
+      "status": "primary_source_canonical_context",
+      "confidence": "high",
+      "source_ids": ["s17-01","s17-02"],
+      "product_implication": "Dish pages should model ritual or seasonal occasion context independently from current Patna availability."
+    },
+    {
+      "id": "f17-02",
+      "type": "event_food_observation",
+      "claim": "The 2026 Bihar Saras Mela at Gyan Bhawan is documented as a ten-day event through September 29 with around 135 stalls and traditional food participation; current reporting also records more than Rs 68.56 lakh in business during its first three days.",
+      "status": "dated_event_observation",
+      "confidence": "high",
+      "source_ids": ["s17-03","s17-04"],
+      "product_implication": "Event pages should expose food categories and dated commercial observations without converting them into permanent venue or demand claims."
+    },
+    {
+      "id": "f17-03",
+      "type": "community_micro_location_signal",
+      "claim": "The March 2026 Reddit litti hunt identifies Chaurasiya Litti and Gopi Krishna Litti around the Mahavir Mandir/GPO Golambar area and additional street-style leads near the RJD office and Maurya Lok.",
+      "status": "community_signal",
+      "confidence": "medium",
+      "source_ids": ["s17-05"],
+      "product_implication": "Community evidence should retain exact locality resolution and be promoted only after independent verification."
+    },
+    {
+      "id": "f17-04",
+      "type": "creator_discovery_signal",
+      "claim": "Current third-party creator indexes identify Foodie Robin (@foodie_robin_) as a Bihar-focused food/travel creator and list several other Patna food creators, but audience and engagement figures vary across providers.",
+      "status": "creator_discovery_signal",
+      "confidence": "medium",
+      "source_ids": ["s17-06","s17-07","s17-08"],
+      "product_implication": "Creator authority should be calculated from geographic specificity, dish/place linkage, source quality and recency rather than follower count alone."
+    },
+    {
+      "id": "f17-05",
+      "type": "market_pattern",
+      "claim": "Current food-discovery products increasingly convert saved social content into maps: Waybites maps creator videos, TasteMap turns forwarded reels into personal food maps, BiteVault combines video saving with visited/open-now states, and rec'd uses save states plus creator following.",
+      "status": "market_pattern",
+      "confidence": "high",
+      "source_ids": ["s17-09","s17-10","s17-11","s17-12"],
+      "product_implication": "Crave Hunt should not compete on generic saving alone; its differentiator should be evidence-aware local intelligence, dish specificity, locality context and historical state."
+    }
+  ],
+  "dedupe_actions": [
+    "No new canonical venue records were promoted from Reddit or creator indexes.",
+    "Saras Mela remains one event entity with dated observations rather than duplicate event records.",
+    "Thekua and Khichdi official tourism pages strengthen canonical dish context but do not imply Patna-specific availability.",
+    "Creator metrics remain dated observations and are not merged into permanent authority attributes."
+  ],
+  "contradictions": [],
+  "implementation": [
+    "Add a reusable culinary-context taxonomy separating dish identity, occasion, season, ritual role and Patna availability.",
+    "Add source-independence as a research quality metric so multiple pages repeating one upstream claim do not count as independent corroboration.",
+    "Update product plan to treat event-to-dish relationships as first-class evidence links."
+  ],
+  "next_build": "Implement evidence timelines and contextual dish/event relationships on public locality, dish, place and event pages, with independent-source counts and explicit Patna-availability status."
+}
