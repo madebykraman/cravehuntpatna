@@ -1,0 +1,104 @@
+{
+  "run_id": "2026-09-24-18",
+  "sources": [
+    {
+      "id": "s18-01",
+      "type": "news",
+      "title": "PMC opens ‘Square Street’ to relocate vendors, ease traffic",
+      "url": "https://timesofindia.indiatimes.com/city/patna/pmc-opens-square-street-to-relocate-vendors-ease-traffic/articleshow/128357428.cms",
+      "role": "infrastructure_inauguration_state",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-02",
+      "type": "news",
+      "title": "New Insta-Worthy Food Spot Alert: Square Street Is Coming To Patna’s Mandiri By Month-End",
+      "url": "https://patnapress.com/patna-square-street-vending-zone-mandiri-road-2026/",
+      "role": "prior_planning_and_design_evidence",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-03",
+      "type": "news",
+      "title": "Saras Mela featuring rural products, traditional food items to open at Gyan Bhawan today",
+      "url": "https://timesofindia.indiatimes.com/city/patna/saras-mela-featuring-rural-products-traditional-food-items-to-open-at-gyan-bhawan-today/amp_articleshow/134354530.cms",
+      "role": "event_schedule_and_food_participation",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-04",
+      "type": "news",
+      "title": "Bihar Saras Mela In Patna: Rs 68.56 Lakh Business In Three Days",
+      "url": "https://patnapress.com/bihar-saras-mela-patna-rs-68-56-lakh-business-rural-women/",
+      "role": "dated_event_food_economy_observation",
+      "confidence": "medium_high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-05",
+      "type": "community",
+      "title": "I think I had my best food day in Patna today",
+      "url": "https://www.reddit.com/r/Patna/comments/1wkn6oh/i_think_i_had_my_best_food_day_in_patna_today/",
+      "role": "community_discovery_and_visit_signal",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-06",
+      "type": "community",
+      "title": "Looking for actual good non-veg spots in Patna",
+      "url": "https://www.reddit.com/r/Patna/comments/1wdtim2/looking_for_actual_good_nonveg_spots_in_patna/",
+      "role": "branch_level_recommendation_and_contradiction_signal",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-07",
+      "type": "community_event",
+      "title": "Patna Heritage & Food tour",
+      "url": "https://www.reddit.com/r/india_tourism/comments/1w7d57o/patna_heritage_food_tour/",
+      "role": "food_tour_discovery_lead",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-08",
+      "type": "community_event",
+      "title": "Patna Heritage & Food tour",
+      "url": "https://www.reddit.com/r/Patna/comments/1wfz55i/patna_heritage_food_tour/",
+      "role": "cross_subreddit_event_signal",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-09",
+      "type": "official_regional_context",
+      "title": "Bihar Foundation cuisine page",
+      "url": "https://biharfoundation.in/know-your-bihar/art-culture/cuisines",
+      "role": "district_dish_provenance",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-10",
+      "type": "community",
+      "title": "What do you think about Patna?",
+      "url": "https://www.reddit.com/r/bihar/comments/1s3tbt5/what_do_you_think_about_patna/",
+      "role": "regional_culinary_diversity_signal",
+      "confidence": "medium",
+      "freshness_checked": "2026-09-24"
+    },
+    {
+      "id": "s18-11",
+      "type": "product_research",
+      "title": "Waybites",
+      "url": "https://www.waybites.com/",
+      "role": "creator_video_to_food_map_pattern",
+      "confidence": "high",
+      "freshness_checked": "2026-09-24"
+    }
+  ]
+}
