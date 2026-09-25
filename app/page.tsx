@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowRight, Bookmark, ExternalLink, Flame, Heart, MapPin, Play, Search, Send, Sparkles, X } from "lucide-react";
 import feed from "../data/discovery-feed.json";
 import atlas from "../data/atlas-surface.json";
+import timeline from "../data/evidence-timeline-surface.json";
 
 type RecordItem = (typeof feed.records)[number];
 
@@ -32,7 +33,7 @@ export default function Home() {
   return <main>
     <nav className="nav">
       <div className="brand"><span className="brandMark">CH</span><div><b>CRAVE HUNT</b><small>PATNA</small></div></div>
-      <div className="navlinks"><a href="#discover">Discover</a><a href="#hunts">Crave Hunts</a><a href="#atlas">Atlas</a><a href="#reels">Food Reels</a></div>
+      <div className="navlinks"><a href="#discover">Discover</a><a href="#hunts">Crave Hunts</a><a href="#atlas">Atlas</a><a href="#evidence">Evidence</a><a href="#reels">Food Reels</a></div>
       <button className="huntBtn" onClick={() => setHunt(true)}>List a craving <ArrowRight size={16}/></button>
     </nav>
 
@@ -69,6 +70,11 @@ export default function Home() {
     <section className="dark" id="hunts"><div className="huntVisual"><div className="circle">CRAVE<br/>HUNT<br/><span>∞</span></div><div className="orbit o1">LITTI</div><div className="orbit o2">MOMO</div><div className="orbit o3">CHAAT</div></div><div className="huntCopy"><p className="eyebrow">THE FEATURE THAT BUILDS THE DATABASE</p><h2>Can't find<br/><i>your craving?</i></h2><p>Tell us exactly what you're hunting. Dish. Area. A reel you saw. A stall your friend swears by. We'll investigate it, preserve the evidence and decide what belongs in the archive.</p><button className="creamBtn" onClick={() => setHunt(true)}>Start a Crave Hunt <Send size={16}/></button><small>No anonymous star spam. No pay-to-win rankings. Better local intelligence.</small></div></section>
 
     <section className="section reels" id="reels"><div className="sectionHead"><div><p className="eyebrow">WATCH BEFORE YOU WALK</p><h2>Creators are<br/>part of the map.</h2></div><p className="muted">Creator discovery is indexed separately from editorial truth. Reach is a distribution signal, not a quality score.</p></div><div className="reelGrid">{feed.records.filter((record) => record.kind === "creator").map((record, i) => <a className="reel" href={sourceLink(record)} target="_blank" rel="noreferrer" key={record.id}><div className="play"><Play fill="currentColor" size={17}/></div><div><small>INSTAGRAM LEAD · {String(i + 1).padStart(2, "0")}</small><h3>{record.title}</h3><p>{record.subtitle}</p></div><ExternalLink size={16}/></a>)}</div></section>
+
+    <section className="evidenceTimeline" id="evidence">
+      <div className="sectionHead"><div><p className="eyebrow">PUBLIC EVIDENCE TIMELINE</p><h2>What changed.<br/><i>What remains uncertain.</i></h2></div><p className="muted">Current state is derived from dated observations. Contradictions stay visible instead of being silently flattened.</p></div>
+      <div className="timelineGrid">{timeline.records.map((record) => <article className="timelineCard" key={record.entity}><div className="timelineHead"><span>{record.kind}</span><b className={record.confidence}>{record.state}</b></div><h3>{record.entity}</h3><div className="timelineItems">{record.timeline.map((item) => <div className="timelineItem" key={item.date + item.label}><span className={item.role}>{item.date}</span><div><b>{item.label}</b><p>{item.text}</p></div></div>)}</div><div className="timelineAction"><small>NEXT RECHECK</small><strong>{record.action}</strong></div></article>)}</div>
+    </section>
 
     <section className="legacy"><div className="legacyIntro"><p className="eyebrow">THE PATNA FOOD ATLAS</p><h2>A city is<br/><i>what it eats.</i></h2><p>Crave Hunt is becoming a living archive of Patna's food: dishes, streets, people, memories, seasons and changing places, with the evidence left visible.</p></div><div className="legacyCards"><article><span>01</span><b>Legacy</b><p>Litti, sattu, ghugni, sweets, meat traditions, chai and the foodways that make Bihar recognisable.</p></article><article><span>02</span><b>Begin here</b><p>New to Patna? Start with curated first-day trails, dish primers and locality-led hunts.</p></article><article><span>03</span><b>Food now</b><p>Markets, pop-ups, festivals, food walks and changing vending corridors, linked to sources.</p></article><article><span>04</span><b>Go deeper</b><p>See the source, distinguish signal from fact, then decide where the craving takes you.</p></article></div></section>
 
