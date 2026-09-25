@@ -65,3 +65,7 @@ Run 19 adds a concrete operational-data quality case: the same Litti Hut aggrega
 Market research continues to show convergence around turning creator content into persistent food maps through products such as Waybites, CraveMap, Ready to Echo and FoodPrint. Crave Hunt's differentiation therefore remains evidence-aware local intelligence rather than generic saving or mapping.
 
 Research runs and source registries are preserved under `data/` and audit notes under `docs/`. See `data/culinary-context-taxonomy.json` for the current context model and the latest run audit for integrity changes.
+
+
+## Run 20 — state resolution
+Operational state is now derived from dated observations rather than trusted as a single mutable field. Conflicts force an uncertain state and a recheck. A public evidence timeline is now part of the product surface, showing source role, confidence, dated observations and next action. See `data/state-resolution.json`, `data/evidence-timeline-surface.json` and `docs/current-state-resolution.md`.
