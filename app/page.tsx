@@ -12,7 +12,7 @@ const chips = ["Litti Chokha", "Street Food", "Chaat", "Biryani", "Sweets", "Cof
 
 const sourceById = Object.fromEntries(feed.sources.map((source) => [source.id, source]));
 const sourceLink = (record: RecordItem) => sourceById[record.source_ids[0]]?.url ?? "#";
-const entityHref = (record: RecordItem) => record.kind === "dish" ? `/dish/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : record.kind === "locality" || record.kind === "corridor" ? `/locality/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : record.kind === "event" ? `/event/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : "#";
+const entityHref = (record: RecordItem) => { const slugMap: Record<string,string> = {"JP Ganga Path · Digha Roundabout":"digha-golambar-jp-ganga-path","Boring Road":"boring-road","Exhibition Road":"exhibition-road","Fraser Road":"fraser-road","Kankarbagh":"kankarbagh","Patna Junction · Buddha Smriti Park":"patna-junction-buddha-smriti-park"}; const slug = slugMap[record.title] ?? record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""); return record.kind === "dish" ? `/dish/${slug}` : record.kind === "locality" || record.kind === "corridor" ? `/locality/${slug}` : record.kind === "event" ? `/event/${slug}` : "#"; };
 
 export default function Home() {
   const [query, setQuery] = useState("");
