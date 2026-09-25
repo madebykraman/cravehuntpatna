@@ -13,7 +13,10 @@
     "media_relationships": "creator content is evidence or discovery context until its referenced place or dish is independently resolved",
     "media_integrity": "viral or creator media must carry an authenticity/context state; fact-checked or scripted content must not become factual place evidence",
     "infrastructure_lifecycle": "planned or changing food infrastructure must preserve dated plan versions and must not be represented as operational until supported by current evidence",
-    "editorial_weight": "unsupported superlatives or ranking language from editorial guides are discovery signals, not confidence upgrades"
+    "editorial_weight": "unsupported superlatives or ranking language from editorial guides are discovery signals, not confidence upgrades",
+    "current_state": "operating state is derived from dated observations; conflicting current observations force an uncertain state and recheck",
+    "source_independence": "repeated reporting from one upstream claim does not count as independent corroboration",
+    "public_timelines": "entity timelines expose dated evidence, source role, confidence and next recheck action"
   },
   "place": {
     "id":"string","name":"string","aliases":["string"],"entity_type":"stall|restaurant|market|food_street|institution|vending_zone",
@@ -58,6 +61,9 @@
   "creator": {
     "id":"string","name":"string","handles":["string"],"home_area":"string","platforms":["instagram|youtube|x"],
     "sources":["source_id"],"confidence":"high|medium|low","observations":["observation_id"],"media_links":["media_link_id"]
+  },
+  "state_resolution": {
+    "id":"string","entity_id":"string","derived_state":"active|provisional|uncertain|closed|relocated|historical|ongoing|past|unknown","confidence":"high|medium|low","last_checked":"YYYY-MM-DD","observation_ids":["observation_id"],"conflict_ids":["claim_id"],"next_action":"string"
   },
   "media_link": {
     "id":"string","creator_id":"creator_id","source_id":"source_id","entity_ids":["place_id|dish_id|locality_id"],
