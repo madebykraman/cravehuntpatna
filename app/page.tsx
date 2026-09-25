@@ -12,6 +12,7 @@ const chips = ["Litti Chokha", "Street Food", "Chaat", "Biryani", "Sweets", "Cof
 
 const sourceById = Object.fromEntries(feed.sources.map((source) => [source.id, source]));
 const sourceLink = (record: RecordItem) => sourceById[record.source_ids[0]]?.url ?? "#";
+const entityHref = (record: RecordItem) => record.kind === "dish" ? `/dish/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : record.kind === "locality" || record.kind === "corridor" ? `/locality/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : record.kind === "event" ? `/event/${record.title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}` : "#";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -55,7 +56,7 @@ export default function Home() {
       <div className="grid">
         {filtered.map((record) => <article className="foodCard" key={record.id}>
           <div className="photo researchPhoto"><span className="tag">{record.kind.replace("_", " ")}</span><span className="confidence">{record.confidence} confidence</span><button className="save" aria-label={`Save ${record.title}`} onClick={() => toggle(record.id)}>{saved.includes(record.id) ? <Heart fill="currentColor" size={17}/> : <Bookmark size={17}/>}</button><div className="researchIndex">{String(feed.records.indexOf(record) + 1).padStart(2, "0")}</div></div>
-          <div className="cardBody"><div className="meta"><span>{record.tags[0]}</span><span>{record.area}</span></div><h3>{record.title}</h3><p>{record.subtitle}</p><div className="location"><MapPin size={14}/>{record.area}<a href={sourceLink(record)} target="_blank" rel="noreferrer" aria-label={`Open source for ${record.title}`}><ExternalLink size={15}/></a></div></div>
+          <div className="cardBody"><div className="meta"><span>{record.tags[0]}</span><span>{record.area}</span></div><h3>{record.title}</h3><p>{record.subtitle}</p><a className="entityLink" href={entityHref(record)}>Open research record <ArrowRight size={14}/></a><div className="location"><MapPin size={14}/>{record.area}<a href={sourceLink(record)} target="_blank" rel="noreferrer" aria-label={`Open source for ${record.title}`}><ExternalLink size={15}/></a></div></div>
         </article>)}
       </div>
       {filtered.length === 0 && <div className="empty">No verified research record matches that hunt yet. Submit it and make the gap visible.</div>}
@@ -63,7 +64,7 @@ export default function Home() {
 
     <section className="atlasExplorer" id="locality-atlas">
       <div className="sectionHead"><div><p className="eyebrow">LOCALITY ATLAS · LIVE RESEARCH</p><h2>Where Patna<br/><i>eats.</i></h2></div><p className="muted">Geography is treated as evidence. Pincodes can overlap, corridors can change, and proposed food zones are never shown as permanent facts.</p></div>
-      <div className="atlasGrid">{atlas.records.map((place) => <article className="atlasCard" key={place.id}><div className="atlasTop"><span>{place.type}</span><b>{place.status}</b></div><h3>{place.name}</h3><p>{place.signals.join(" · ")}</p><div className="atlasMeta"><span><MapPin size={13}/>{place.pincode}</span><span>{place.pincode_confidence} pin</span><span>{place.evidence} evidence</span></div><div className="atlasOpen"><span>Open question</span><b>{place.open}</b></div></article>)}</div>
+      <div className="atlasGrid">{atlas.records.map((place) => <article className="atlasCard" key={place.id}><div className="atlasTop"><span>{place.type}</span><b>{place.status}</b></div><h3>{place.name}</h3><p>{place.signals.join(" · ")}</p><a className="atlasLink" href={`/locality/${place.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"")}`}>Open locality record <ArrowRight size={14}/></a><div className="atlasMeta"><span><MapPin size={13}/>{place.pincode}</span><span>{place.pincode_confidence} pin</span><span>{place.evidence} evidence</span></div><div className="atlasOpen"><span>Open question</span><b>{place.open}</b></div></article>)}</div>
       <div className="atlasCreator"><div><p className="eyebrow">CREATOR COVERAGE</p><h3>Reach is a signal.<br/>Not a verdict.</h3></div>{atlas.creator_leads.map((creator) => <a href={creator.source} target="_blank" rel="noreferrer" key={creator.handle}><span>{creator.handle}</span><b>{creator.label}</b><small>{creator.note}</small><ExternalLink size={15}/></a>)}</div>
     </section>
 
