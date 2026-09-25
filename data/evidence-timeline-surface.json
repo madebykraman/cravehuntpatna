@@ -1,0 +1,15 @@
+{
+  "generated_at":"2026-09-25",
+  "legend":[
+    {"key":"verified","label":"Verified fact"},
+    {"key":"observation","label":"Dated observation"},
+    {"key":"community_signal","label":"Community signal"},
+    {"key":"conflict","label":"Unresolved conflict"}
+  ],
+  "records":[
+    {"entity":"Chaat Guru — Exhibition Road","kind":"place","state":"uncertain","confidence":"low","last_checked":"2026-09-25","timeline":[{"date":"2026-09-25","label":"Aggregator observation","text":"Listing contains shutdown wording and an Open Now indicator.","role":"conflict"}],"action":"Independent current verification required."},
+    {"entity":"Square Street — Mandiri / Chhajjubag","kind":"corridor","state":"historical operational claim","confidence":"medium","last_checked":"2026-09-25","timeline":[{"date":"2026-02","label":"Reported inauguration","text":"News reporting moved the corridor from planned to inaugurated-state language.","role":"observation"}],"action":"Current occupancy still needs verification."},
+    {"entity":"Freshbox — Patna","kind":"place","state":"historical status unresolved","confidence":"low","last_checked":"2026-09-25","timeline":[{"date":"2026","label":"Community report","text":"Reddit discussion reports closure; no independent corroboration yet.","role":"community_signal"}],"action":"Do not publish closed as fact until corroborated."},
+    {"entity":"Saras Mela 2026 — Gyan Bhawan","kind":"event","state":"ongoing","confidence":"high","last_checked":"2026-09-25","timeline":[{"date":"2026-09-24","label":"Current event evidence","text":"135+ stalls reported.","role":"verified"},{"date":"2026-09-24","label":"Commercial observation","text":"₹68.56 lakh reported business in first three days.","role":"observation"}],"action":"Archive final event state after closing."}
+  ]
+}
